@@ -564,10 +564,16 @@ h1, h2 {
 }  
 .img-wrapper {
     position: relative;
-    width: 30vw;
-    height: 30vw;
+    width: 250px;
+    height: 250px;
     overflow: hidden;
 
+}
+@media (max-width: 1080px) {
+    .img-wrapper {
+        width: 30vw;
+        height: 30vw;
+    }
 }
 .img-wrapper img {
     position: absolute;
