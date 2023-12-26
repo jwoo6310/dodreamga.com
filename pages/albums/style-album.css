@@ -1,0 +1,733 @@
+/* style-sub css */
+
+/* font lists */
+@font-face {
+    font-family: 'menu';
+    src: url('../../assets/fonts/TTBanditbulL.woff2') format('woff2'),
+        url('../../assets/fonts/TTBanditbulL.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'main-header';
+    src: url('../../assets/fonts/awesome-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/awesome-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'sub-header';
+    src: url('../../assets/fonts/TTOhneulbamR.woff2') format('woff2'),
+        url('../../assets/fonts/TTOhneulbamR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ONE Mobile Title';
+    src: url('../../assets/fonts/ONEMobileTitleRegular.woff2') format('woff2'),
+        url('../../assets/fonts/ONEMobileTitleRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ONE Mobile';
+    src: url('../../assets/fonts/ONEMobileRegular.woff2') format('woff2'),
+        url('../../assets/fonts/ONEMobileRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tenada';
+    src: url('../../assets/fonts/Tenada.woff2') format('woff2'),
+        url('../../assets/fonts/Tenada.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+
+/* default */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    margin: 0; /* Remove the default margin to prevent the background from extending */
+    padding: 0; /* Remove the default padding */
+    text-align: center;
+    background-color: rgb(163, 106, 0, 0.1);
+}
+.background-image {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 550px; /* Set the height to 50% of the viewport height */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: -1;
+    transition: background-image 3s ease-in-out;
+}
+/* top bar */
+.header-container {
+    width: 100%;
+    height: 333px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+.header-image {
+    width: 200px;
+}
+.menu-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+/* main menu items */
+nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+/* main menu links */
+nav > ul > li > a {
+    color: whitesmoke;
+    font-family: 'Tenada', sans-serif;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+nav > ul > li > a:hover {
+    color: #555; /* Adjust the link color on hover */
+}
+/* sub-menu */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 80%; /* adjust spacing between main menu and sub menu */
+    left: -30px; /* adjust position */
+    background-color: transparent;
+    white-space: nowrap; /* Prevent text from wrapping to a new line */
+    z-index: 1; /* Add a higher z-index to make sure the sub-menu appears on top */
+}
+/* sub-menu items */
+.sub-menu li {
+    display: inline-block; /* Change display to inline-block for horizontal layout */
+}
+/* sub-menu links */
+.sub-menu li a {
+    display: block;
+    color: whitesmoke;
+    font-family: 'Tenada', sans-serif;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+/* sub-menu hover */
+nav ul li:hover > ul,
+nav ul ul:hover {
+    display: block;
+}
+.sub-menu a:hover {
+    color: #555; /* Adjust the link color on hover */
+}
+/* hover stay visible */
+nav li {
+    position: relative;
+}
+nav li:hover > ul {
+    display: block;
+}
+
+
+
+/* main header */
+section h1 {
+    font-family: 'sub-header', sans-serif;
+    font-size: 50px; /* Adjust the font size as needed */
+    color: white; /* Adjust the color as needed (this is red) */
+    text-shadow: 7px 7px 10px rgb(245,221,162);
+    font-weight: 500;
+    padding: 0px;
+    line-height: 70%;
+}
+.main-header {
+    margin-top: -76px;
+}
+
+
+
+/* section */
+section {
+    position: relative;
+    z-index: 2;
+}
+/* horizontal tab */
+.horizontal-tab {
+    text-align: center; /* Center align the title and the buttons */
+    margin: auto;
+}
+
+.horizontal-tab-title {
+    font-size: 30px; /* Size of the title */
+    padding: 20px; /* Padding around the title */
+    color: #333; /* Text color of the title */
+    font-weight: bold;
+    font-family: 'Tenada', sans-serif;
+}
+
+.horizontal-tab-buttons {
+    display: inline-block; /* Align the navigation tabs */
+    margin-bottom: 20px; /* Space below the tabs */
+}
+
+.horizontal-tab-buttons ul {
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
+}
+
+.horizontal-tab-buttons li {
+    display: inline-block; /* Inline-block display for li elements */
+    margin: 0 5px; /* Margin between buttons */
+}
+
+.horizontal-tab-buttons li a {
+    padding: 10px 20px; /* Padding inside buttons */
+    text-decoration: none;
+    color: #333; /* Text color for the buttons */
+    background-color: #ffffff; /* Button background color for a clean look */
+    border: 1px solid #ddd; /* Lighter border color for a subtle effect */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: none; /* Remove box-shadow for a flatter look */
+    font-family: 'Tenada', sans-serif;
+}
+
+.horizontal-tab-buttons li a:hover {
+    background-color: #f2f2f2; /* Slightly darker background on hover */
+    border-color: #bbb; /* Darker border on hover for contrast */
+    color: #000; /* Optionally change text color on hover */
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.horizontal-tab-title, .horizontal-tab-buttons {
+    -webkit-animation: fadeIn 0.5s 0s ease-in forwards;
+    animation: fadeIn 0.5s 0s ease-in forwards;
+}
+
+h2, ul {
+    font-family: 'Tenada', sans-serif;
+    color: black; /* Adjust the color as needed (this is red) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+    font-weight: 300;
+    font-size: 20px;
+    font-weight: bold;
+}
+h1, .vertical-tab {
+    -webkit-animation: fadeIn 0.5s 0s ease-in forwards;
+    animation: fadeIn 0.5s 0s ease-in forwards;
+}
+
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(0, 4px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+  
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(0, 4px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+}
+
+/* content container */
+.content-container {
+    background-color: white; /* Background color for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow for the container */
+    margin: 20px auto; /* Add margins on the top and bottom, and auto for left and right to center the container */
+    max-width: 1280px; /* Set a maximum width for the container */
+    margin-top: 63px;
+}
+.content-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content-container p1 {
+    font-family: 'ONE Mobile Title', sans-serif;
+    color: black; /* Adjust the color as needed (this is red) */
+    font-weight: 300;
+    font-size: 33px;
+    font-weight: lighter;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+
+@media (max-width: 1080px) {
+    .main-header h1 {
+        font-size: 150px;
+    }
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-bar {
+        width: 95%;
+        /* Make the menu bar fill the container width */
+        text-align: center;
+        justify-content: center;
+    }
+
+    nav>ul {
+        flex-direction: row;
+        /* Display menu items in a row */
+        justify-content: center;
+        /* Center align the menu items horizontally */
+        width: 95%;
+        /* Make the menu items fill the container width */
+        flex-wrap: wrap;
+        /* Allow menu items to wrap to the next line */
+    }
+
+    nav>ul>li {
+        margin-bottom: 30px;
+
+    }
+    nav ul ul {
+        left: -100px;
+        /* adjust position */
+    }
+
+    .header-image {
+        margin-top: 70px;
+        margin-left: auto;
+    }
+
+    .main-header {
+        margin-top: 40px;
+        margin-bottom: -40px;
+    }
+    .main-header h1 {
+        font-size: 40px;
+    }
+
+
+
+    .image-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .content {
+        width: 100%; /* Set the width to 100% to make it responsive */
+        max-width: 400px; /* You can set a max-width if needed */
+        max-height: 300px;
+        margin-left: 0;
+        height: auto; /* Allow the height to adjust automatically */
+        margin-right: 0;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .horizontal-tab-title {
+        font-size: 25px; /* Size of the title */
+        padding: 20px; /* Padding around the title */
+        color: #333; /* Text color of the title */
+        font-weight: bold;
+        font-family: 'Tenada', sans-serif;
+    }
+    .horizontal-tab-buttons li a {
+        padding: 5px 10px; /* Padding inside buttons */
+        text-decoration: none;
+        color: #333; /* Text color for the buttons */
+        background-color: #ffffff; /* Button background color for a clean look */
+        border: 1px solid #ddd; /* Lighter border color for a subtle effect */
+        border-radius: 5px; /* Rounded corners for buttons */
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+        box-shadow: none; /* Remove box-shadow for a flatter look */
+        font-family: 'Tenada', sans-serif;
+        font-size: 18px;;
+    }
+    
+    nav > ul {
+        width: 400px; /* Make the menu items fill the container width */
+    }
+    nav ul ul {
+        left: -100px; /* adjust position */
+    }
+    nav>ul>li>a {
+        font-size: 17px;
+    }
+    .sub-menu li a {
+        font-size: 13px;
+    }
+
+    
+
+    .content {
+        width: 100%; /* Set the width to 100% to make it responsive */
+        max-width: 300px; /* You can set a max-width if needed */
+        max-height: 200px;
+        margin-left: 0;
+        height: auto; /* Allow the height to adjust automatically */
+        margin-right: 0;
+    }
+    
+}
+
+
+
+@media (max-width: 500px) {
+    nav>ul>li>a {
+        font-size: 3.5vw;
+    }
+    .sub-menu li a {
+        font-size: 2.5vw;
+    }
+
+
+    .background-image {
+        background-position-x: -390px;
+    }
+    nav > ul {
+        width: 400px; /* Make the menu items fill the container width */
+    }
+    .main-header h1 {
+        font-size: 30px;
+    }
+    .horizontal-tab-title {
+        font-size: 20px; /* Size of the title */
+    }
+    .horizontal-tab-buttons li a {
+        font-size: 13px;
+    }
+}
+    
+.container {
+    display: flex;
+    flex-wrap: wrap; /* This allows items to wrap onto the next line */
+    gap: 10px; /* This adds space between your items */
+  }
+.content {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex: 1 0 calc(50% - 10px);
+  }
+  
+  .content .content-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+  }
+  
+  .content:hover .content-overlay {
+    opacity: 1;
+  }
+  
+  .content-image {
+    height: 500px;
+    width: auto;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  
+  .content-details {
+    position: absolute;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .content:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+  
+  .content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+  
+  .content-details p {
+    color: #fff;
+    font-size: 0.8em;
+  }
+  .fadeIn-bottom {
+    top: 75%;
+  }
+
+
+  
+
+body {
+    background-color: #F0F5FE;
+    font-family: -apple-system, helvetica, Sans-serif;
+}
+  
+h1, h2 {
+    -webkit-animation: fadeIn 0.5s 0s ease-in forwards;
+    animation: fadeIn 0.5s 0s ease-in forwards;
+}
+  
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(0, 4px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+  
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(0, 4px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+}
+  
+#gallery {
+    padding-top: 0px;
+    margin-bottom: 30px;
+    margin: auto;
+}
+@media screen and (min-width: 991px) {
+    #gallery {
+        padding: 60px 30px 0 30px;
+    }
+}  
+
+
+
+
+
+
+.img-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+
+}
+.img-wrapper img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.image {
+    width: calc(33.33% - 10px); /* Adjust the width as needed */
+    margin-bottom: 10px; /* Add margin for spacing between images */
+    margin-right: 10px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    float: left; /* Float the images to make them appear side by side */
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Clear the float after each row */
+.image:nth-child(3n + 1) {
+    clear: both;
+}
+.img-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.img-overlay i {
+    color: #fff;
+    font-size: 3em;
+    transition: transform 0.3s ease;
+}
+#overlay {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#overlay img {
+    margin: 0;
+    width: auto;
+    height: 80%;
+    -o-object-fit: contain;
+       object-fit: contain;
+}
+@media screen and (min-width: 768px) {
+    #overlay img {
+        width: 60%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    #overlay img {
+        width: 50%;
+    }
+}
+#nextButton {
+    color: #fff;
+    font-size: 3em;
+    transition: opacity 0.7s;
+}
+#nextButton:hover {
+    opacity: 0.7;
+}
+@media screen and (min-width: 768px) {
+    #nextButton {
+      font-size: 3em;
+    }
+}
+  
+#prevButton {
+    color: #fff;
+    font-size: 3em;
+    transition: opacity 0.7s;
+}
+#prevButton:hover {
+    opacity: 0.7;
+}
+@media screen and (min-width: 768px) {
+    #prevButton {
+      font-size: 3em;
+    }
+}
+  
+#exitButton {
+    color: #fff;
+    font-size: 3em;
+    transition: opacity 0.7s;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+#exitButton:hover {
+    opacity: 0.7;
+}
+@media screen and (min-width: 768px) {
+    #exitButton {
+      font-size: 3em;
+    }
+}
+.img-overlay i:before {
+    content: "\f002"; /* Unicode character for the magnifier icon */
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute items evenly */
+}
+
+.image {
+    width: calc(33.33% - 10px); /* Adjust the width as needed */
+    margin-bottom: 10px; /* Add margin for spacing between images */
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
