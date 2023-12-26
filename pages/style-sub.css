@@ -406,6 +406,11 @@ p3 {
 }
 
 @media (max-width: 1080px) {
+    .content .content-image {
+        width: 150%;
+        height: auto;
+        margin-left: -20%;
+    }
     .main-header h1 {
         font-size: 150px;
     }
@@ -609,8 +614,8 @@ p3 {
         margin-left: 0;
         height: auto; /* Allow the height to adjust automatically */
         margin-right: 0;
-      }
-      p1 {
+    }
+    p1{
         font-size:  30px;
     }
     p2 {
@@ -662,13 +667,29 @@ p3 {
     .horizontal-tab-buttons li a {
         font-size: 13px;
     }
+    .content-title, .content-text {
+        font-size: 12px;
+    }
+    .content {
+        width: 100%; /* Set the width to 100% to make it responsive */
+        max-width: 300px; /* You can set a max-width if needed */
+        max-height: 150px;
+        margin-left: 0;
+        height: auto; /* Allow the height to adjust automatically */
+        margin-right: 0;
+    }
+    .content .content-image {
+        width: 150%;
+        height: auto;
+        margin-left: -20%;
+    }
 }
     
 .container {
     display: flex;
     flex-wrap: wrap; /* This allows items to wrap onto the next line */
     gap: 10px; /* This adds space between your items */
-  }
+}
   
 .content {
     position: relative;
@@ -680,9 +701,9 @@ p3 {
     display: flex;
     justify-content: center;
     flex: 1 0 calc(50% - 10px);
-  }
+}
   
-  .content .content-overlay {
+.content .content-overlay {
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
     height: 100%;
@@ -695,9 +716,8 @@ p3 {
     -webkit-transition: all 0.4s ease-in-out 0s;
     -moz-transition: all 0.4s ease-in-out 0s;
     transition: all 0.4s ease-in-out 0s;
-    
-  }
-  .content-details {
+}
+.content-details {
     position: absolute;
     text-align: center;
     padding-left: 1em;
