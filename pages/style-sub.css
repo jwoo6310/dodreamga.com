@@ -691,9 +691,11 @@ p3 {
 @media (max-width: 499px) {
     .horizontal-tab-title {
         font-size: 7vw; /* Size of the title */
+        font-weight: lighter;
     }
     .horizontal-tab-buttons li a {
         font-size: 3vw;
+        font-weight: lighter;
     }
     .photo-text .text-column1 {
         margin-left: 30px;
