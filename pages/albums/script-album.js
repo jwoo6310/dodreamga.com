@@ -113,3 +113,12 @@ $exitButton.click(function () {
 });
 
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  var menu = document.getElementById("menu");
+  menu.style.display = 'none'; // Ensures the menu is hidden at the start
+});
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "none" ? "flex" : "none";
+}
