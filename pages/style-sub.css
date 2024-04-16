@@ -60,101 +60,110 @@ body {
     margin: 0; /* Remove the default margin to prevent the background from extending */
     padding: 0; /* Remove the default padding */
     text-align: center;
-    background-color: rgb(163, 106, 0, 0.1);
+    background-color: rgb(22,33,26,1);
 }
 .background-image {
     position: absolute;
-    top: 0;
     width: 100%;
-    height: 550px; /* Set the height to 50% of the viewport height */
+    height: 1280px; /* Set the height to 50% of the viewport height */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
     z-index: -1;
     transition: background-image 3s ease-in-out;
+    margin-top: 0px;
 }
+
 /* top bar */
 .header-container {
     width: 100%;
-    height: 333px;
+    height: 100px;
     margin: auto;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(128, 128, 128, 0.5);
 }
+
 .header-image {
     width: 200px;
 }
+
+/* Menu Bar Configuration */
 .menu-bar {
     display: flex;
     align-items: center;
     margin-left: 30px;
 }
-/* main menu items */
+
+/* Navigation: Reset list styles and set flex properties */
 nav > ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
-}
-/* main menu links */
-nav > ul > li > a {
-    color: whitesmoke;
-    font-family: 'Tenada', sans-serif;
-    text-decoration: none;
-    padding: 20px;
-    font-size: 20px;
-    font-weight: bolder;
-    position: relative;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-}
-nav > ul > li > a:hover {
-    color: #555; /* Adjust the link color on hover */
-}
-/* sub-menu */
-nav ul ul {
-    display: none;
-    position: absolute;
-    top: 80%; /* adjust spacing between main menu and sub menu */
-    left: -30px; /* adjust position */
-    background-color: transparent;
-    white-space: nowrap; /* Prevent text from wrapping to a new line */
-    z-index: 1; /* Add a higher z-index to make sure the sub-menu appears on top */
-}
-/* sub-menu items */
-.sub-menu li {
-    display: inline-block; /* Change display to inline-block for horizontal layout */
-}
-/* sub-menu links */
-.sub-menu li a {
-    display: block;
-    color: whitesmoke;
-    font-family: 'Tenada', sans-serif;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bolder;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-}
-/* sub-menu hover */
-nav ul li:hover > ul,
-nav ul ul:hover {
-    display: block;
-}
-.sub-menu a:hover {
-    color: #555; /* Adjust the link color on hover */
-}
-/* hover stay visible */
-nav li {
-    position: relative;
-}
-nav li:hover > ul {
-    display: block;
+    max-width: 1280px;
 }
 
+/* General link styling */
+nav a {
+    color: white;
+    font-family: 'Tenada', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Main menu links */
+nav > ul > li {
+    position: relative; /* Ensures that submenu is positioned relative to these items */
+    margin: 20px;
+}
+
+nav > ul > li > a {
+    padding: 20px;
+    font-size: 20px;
+    margin: 20px;
+    position: relative;
+}
+
+nav > ul > li > a:hover {
+    color: #555;
+}
+
+/* Sub-menu Configuration */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Adjusts the sub-menu to drop directly below the parent item */
+    left: 0; /* Aligns sub-menu with the left edge of the parent item */
+    background-color: transparent;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+/* Sub-menu item styling */
+.sub-menu li {
+    display: inline-block;
+}
+
+.sub-menu a {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.sub-menu a:hover {
+    color: #555;
+}
+
+/* Display sub-menu on hover */
+nav li:hover > .sub-menu {
+    display: block;
+}
 
 
 /* main header */
@@ -168,7 +177,7 @@ section h1 {
     line-height: 70%;
 }
 .main-header {
-    margin-top: -76px;
+    margin-top: 0px;
 }
 
 
@@ -181,19 +190,23 @@ section {
 /* horizontal tab */
 .horizontal-tab {
     text-align: center; /* Center align the title and the buttons */
+    margin-bottom: 30px;
 }
 
 .horizontal-tab-title {
     font-size: 30px; /* Size of the title */
     padding: 20px; /* Padding around the title */
-    color: #333; /* Text color of the title */
+    color: white; /* Text color of the title */
     font-weight: bold;
     font-family: 'Tenada', sans-serif;
+
+
 }
 
 .horizontal-tab-buttons {
     display: inline-block; /* Align the navigation tabs */
     margin-bottom: 20px; /* Space below the tabs */
+    
 }
 
 .horizontal-tab-buttons ul {
@@ -209,13 +222,14 @@ section {
 .horizontal-tab-buttons li a {
     padding: 10px 20px; /* Padding inside buttons */
     text-decoration: none;
-    color: #333; /* Text color for the buttons */
-    background-color: #ffffff; /* Button background color for a clean look */
+    color: white; /* Text color for the buttons */
+    background-color: transparent; /* Button background color for a clean look */
     border: 1px solid #ddd; /* Lighter border color for a subtle effect */
     border-radius: 5px; /* Rounded corners for buttons */
     transition: all 0.3s ease; /* Smooth transition for hover effects */
     box-shadow: none; /* Remove box-shadow for a flatter look */
     font-family: 'Tenada', sans-serif;
+
 }
 
 .horizontal-tab-buttons li a:hover {
@@ -241,7 +255,7 @@ section {
 
 h2, ul {
     font-family: 'Tenada', sans-serif;
-    color: black; /* Adjust the color as needed (this is red) */
+    color: white; /* Adjust the color as needed (this is red) */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
     font-weight: 300;
     font-size: 20px;
@@ -277,11 +291,13 @@ h1, .vertical-tab {
 
 /* content container */
 .content-container {
-    background-color: white; /* Background color for the container */
+    background-color:  rgb(22,33,26,1); /* Background color for the container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow for the container */
     margin: 20px auto; /* Add margins on the top and bottom, and auto for left and right to center the container */
     max-width: 1280px; /* Set a maximum width for the container */
     margin-top: 63px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 .content-container::after {
     content: "";
@@ -332,7 +348,7 @@ h1, .vertical-tab {
 }
 p1 {
     font-family: 'ONE Mobile Title', sans-serif;
-    color: black; /* Adjust the color as needed (this is red) */
+    color: white; /* Adjust the color as needed (this is red) */
     font-weight: 300;
     font-size: 33px;
     font-weight: lighter;
@@ -342,7 +358,7 @@ p1 {
 }
 p2 {
     font-family: 'ONE Mobile Title', sans-serif;
-    color: black; /* Adjust the color as needed (this is red) */
+    color: white; /* Adjust the color as needed (this is red) */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
     font-weight: 300;
     font-size: 25px;
@@ -353,7 +369,7 @@ p2 {
 }
 p3 {
     font-family: 'ONE Mobile', sans-serif;
-    color: black; /* Adjust the color as needed (this is red) */
+    color: white; /* Adjust the color as needed (this is red) */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
     font-weight: 300;
     font-size: 20px;
@@ -407,53 +423,39 @@ p3 {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+@media (max-width: 1440px) {
+    .background-image {
+        height: 1080px;
+    }
 
-@media (max-width: 1080px) {
-    .content .content-image {
-        width: 150%;
-        height: auto;
-        margin-left: -20%;
-    }
-    .main-header h1 {
-        font-size: 150px;
-    }
+    /* top bar */
     .header-container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .menu-bar {
-        width: 95%;
-        /* Make the menu bar fill the container width */
-        text-align: center;
-        justify-content: center;
-    }
-
-    nav>ul {
-        flex-direction: row;
-        /* Display menu items in a row */
-        justify-content: center;
-        /* Center align the menu items horizontally */
-        width: 95%;
-        /* Make the menu items fill the container width */
-        flex-wrap: wrap;
-        /* Allow menu items to wrap to the next line */
-    }
-
-    nav>ul>li {
-        margin-bottom: 30px;
-
-    }
-    nav ul ul {
-        left: -100px;
-        /* adjust position */
+        height: 80px;
     }
 
     .header-image {
-        margin-top: 70px;
-        margin-left: auto;
+        width: 150px;
     }
+
+    /* Menu Bar Configuration */
+    .menu-bar {
+        margin-left: 0px;
+        max-width: 1080px;
+    }
+
+    nav > ul > li {
+        margin: -15px;
+    }
+
+    nav > ul > li > a {
+        font-size: 13px;
+    }
+
+    .sub-menu a {
+        font-size: 12px;
+    }
+}
+@media (max-width: 1080px) {
 
     .main-header {
         margin-top: 40px;
@@ -553,6 +555,54 @@ p3 {
 }
 
 @media (max-width: 800px) {
+    .background-image {
+        height: 1080px;
+    }
+
+    /* top bar */
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+    }
+
+    .header-image {
+        width: 150px;
+        margin-top: -30px;
+        margin-bottom: 10px;
+    }
+
+    /* Menu Bar Configuration */
+    .menu-bar {
+        width: 95%;
+        /* Make the menu bar fill the container width */
+        text-align: center;
+        justify-content: center;
+        margin-left: 0px;
+        max-width: 500px;
+    }
+    nav>ul {
+        flex-direction: row;
+        /* Display menu items in a row */
+        justify-content: center;
+        /* Center align the menu items horizontally */
+        width: 100%;
+        /* Make the menu items fill the container width */
+    }
+
+    nav > ul > li {
+        margin: -20px;
+    }
+    
+
+    nav > ul > li > a {
+        font-size: 11px;
+    }
+
+    .sub-menu a {
+        font-size: 10px;
+    }
     .horizontal-tab-title {
         font-size: 25px; /* Size of the title */
         padding: 20px; /* Padding around the title */
@@ -573,18 +623,6 @@ p3 {
         font-size: 18px;;
     }
     
-    nav > ul {
-        width: 400px; /* Make the menu items fill the container width */
-    }
-    nav ul ul {
-        left: -100px; /* adjust position */
-    }
-    nav>ul>li>a {
-        font-size: 17px;
-    }
-    .sub-menu li a {
-        font-size: 13px;
-    }
     .photo-text .text-column1 {
         max-width: 100% - 50px;
         float: center;
@@ -637,12 +675,7 @@ p3 {
     .text-column1, .text-column2, .text-column3 {
         margin-left: 30px;
     }
-    nav>ul>li>a {
-        font-size: 3.5vw;
-    }
-    .sub-menu li a {
-        font-size: 2.5vw;
-    }
+
     p1 {
         font-size:  20px;
     }
@@ -689,6 +722,28 @@ p3 {
 }
 
 @media (max-width: 499px) {
+    .header-container {
+        height: 200px;
+    }
+
+    .header-image {
+        margin-top: 30px;
+    }
+
+    nav>ul {
+        flex-direction: row;
+        /* Display menu items in a row */
+        justify-content: center;
+        /* Center align the menu items horizontally */
+        width: 80%;
+        /* Make the menu items fill the container width */
+        flex-wrap: wrap;
+    }
+
+    nav>ul>li {
+        margin-bottom: 40px;
+
+    }
     .horizontal-tab-title {
         font-size: 7vw; /* Size of the title */
         font-weight: lighter;
