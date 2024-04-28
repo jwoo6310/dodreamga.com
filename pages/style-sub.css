@@ -606,15 +606,12 @@ p3 {
     .horizontal-tab-title {
         font-size: 25px; /* Size of the title */
         padding: 20px; /* Padding around the title */
-        color: #333; /* Text color of the title */
         font-weight: bold;
         font-family: 'Tenada', sans-serif;
     }
     .horizontal-tab-buttons li a {
         padding: 5px 10px; /* Padding inside buttons */
         text-decoration: none;
-        color: #333; /* Text color for the buttons */
-        background-color: #ffffff; /* Button background color for a clean look */
         border: 1px solid #ddd; /* Lighter border color for a subtle effect */
         border-radius: 5px; /* Rounded corners for buttons */
         transition: all 0.3s ease; /* Smooth transition for hover effects */
