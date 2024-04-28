@@ -1143,6 +1143,7 @@ h1, h2 {
         justify-content: space-between;
         padding: 0 20px;
         flex-direction: row;
+        width: 100%;
     }
     .menu-icon {
         display: block;
