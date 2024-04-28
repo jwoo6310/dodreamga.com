@@ -766,7 +766,7 @@ h1, h2 {
         top: 97px;
         left: 0;
         right: 0;
-        background-color: #F1F0E8;
+        background-color: rgba(241, 240, 232, 0.90);
         color: white;
         padding: 15px;
         box-sizing: border-box;
@@ -780,7 +780,7 @@ h1, h2 {
         max-width: calc(50% - 20px); /* Adjust the width for spacing */
       }
       .menu-section {
-        background-color: #F1F0E8; /* Slightly different background for the sections */
+        background-color: rgba(241, 240, 232, 0.90);
         
         margin-bottom: 0px;
         padding: 10px;
@@ -1141,9 +1141,9 @@ h1, h2 {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 20px;
         flex-direction: row;
         width: 100%;
+        padding: 0px;
     }
     .menu-icon {
         display: block;
@@ -1153,6 +1153,8 @@ h1, h2 {
         margin-bottom: 0px;
         margin-right: 50px;
         background-color: transparent;
+        box-sizing: border-box;
+        
     }
 
     .header-image {
@@ -1213,12 +1215,12 @@ h1, h2 {
       }
 
       .menu {
-        display: none;
+        display: block;
         position: absolute;
         top: 97px;
         left: 0;
         right: 0;
-        background-color: rgba(241, 240, 232, 0.95);
+        background-color: rgba(241, 240, 232, 0.90);
         color: white;
         padding: 15px;
         box-sizing: border-box;
@@ -1227,15 +1229,18 @@ h1, h2 {
         flex-wrap: wrap;
         justify-content: space-around;
         margin-top: -20px;
+        width: 100%;
       }
       .menu-column {
         flex: 1;
         max-width: calc(50% - 20px); /* Adjust the width for spacing */
+        background-color: rgba(241, 240, 232, 0.90);
       }
       .menu-section {   
         margin-bottom: 0px;
         padding: 10px;
         border-radius: 5px;
+        background-color: rgba(241, 240, 232, 0.90);
       }
       .menu-section h2 {
         margin: 0 0 10px 0;
@@ -1245,6 +1250,7 @@ h1, h2 {
         font-family: 'ONE Mobile Title', sans-serif;
         font-weight: lighter;
         text-align: left;
+        background-color: rgba(241, 240, 232, 0.90);
       }
       .menu-section a {
         color: white;
@@ -1252,6 +1258,7 @@ h1, h2 {
         display: block;
         margin: 5px 0;
         color: #7895B2;
+        background-color: rgba(241, 240, 232, 0.90);
         font-family: 'ONE Mobile', sans-serif;
         text-align: left;
         margin-left: 15px;
