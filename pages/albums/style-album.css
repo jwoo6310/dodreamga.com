@@ -51,7 +51,7 @@
 }
 
 /* default */
-.top-bar, .menu, .slide-image {
+.top-bar, .menu-icon, .slide-image {
     display: none;
 }
 body {
@@ -60,101 +60,110 @@ body {
     margin: 0; /* Remove the default margin to prevent the background from extending */
     padding: 0; /* Remove the default padding */
     text-align: center;
-    background-color: rgb(163, 106, 0, 0.1);
+    background-color: rgb(22,33,26,1);
 }
 .background-image {
     position: absolute;
-    top: 0;
     width: 100%;
-    height: 550px; /* Set the height to 50% of the viewport height */
+    height: 1280px; /* Set the height to 50% of the viewport height */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
     z-index: -1;
     transition: background-image 3s ease-in-out;
+    margin-top: 0px;
 }
+
 /* top bar */
 .header-container {
     width: 100%;
-    height: 333px;
+    height: 100px;
     margin: auto;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(128, 128, 128, 0.5);
 }
+
 .header-image {
     width: 200px;
 }
+
+/* Menu Bar Configuration */
 .menu-bar {
     display: flex;
     align-items: center;
     margin-left: 30px;
 }
-/* main menu items */
+
+/* Navigation: Reset list styles and set flex properties */
 nav > ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
-}
-/* main menu links */
-nav > ul > li > a {
-    color: whitesmoke;
-    font-family: 'Tenada', sans-serif;
-    text-decoration: none;
-    padding: 20px;
-    font-size: 20px;
-    font-weight: bolder;
-    position: relative;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-}
-nav > ul > li > a:hover {
-    color: #555; /* Adjust the link color on hover */
-}
-/* sub-menu */
-nav ul ul {
-    display: none;
-    position: absolute;
-    top: 80%; /* adjust spacing between main menu and sub menu */
-    left: -30px; /* adjust position */
-    background-color: transparent;
-    white-space: nowrap; /* Prevent text from wrapping to a new line */
-    z-index: 1; /* Add a higher z-index to make sure the sub-menu appears on top */
-}
-/* sub-menu items */
-.sub-menu li {
-    display: inline-block; /* Change display to inline-block for horizontal layout */
-}
-/* sub-menu links */
-.sub-menu li a {
-    display: block;
-    color: whitesmoke;
-    font-family: 'Tenada', sans-serif;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bolder;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-}
-/* sub-menu hover */
-nav ul li:hover > ul,
-nav ul ul:hover {
-    display: block;
-}
-.sub-menu a:hover {
-    color: #555; /* Adjust the link color on hover */
-}
-/* hover stay visible */
-nav li {
-    position: relative;
-}
-nav li:hover > ul {
-    display: block;
+    max-width: 1280px;
 }
 
+/* General link styling */
+nav a {
+    color: white;
+    font-family: 'Tenada', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Main menu links */
+nav > ul > li {
+    position: relative; /* Ensures that submenu is positioned relative to these items */
+    margin: 20px;
+}
+
+nav > ul > li > a {
+    padding: 20px;
+    font-size: 20px;
+    margin: 20px;
+    position: relative;
+}
+
+nav > ul > li > a:hover {
+    color: #555;
+}
+
+/* Sub-menu Configuration */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Adjusts the sub-menu to drop directly below the parent item */
+    left: 0; /* Aligns sub-menu with the left edge of the parent item */
+    background-color: transparent;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+/* Sub-menu item styling */
+.sub-menu li {
+    display: inline-block;
+}
+
+.sub-menu a {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.sub-menu a:hover {
+    color: #555;
+}
+
+/* Display sub-menu on hover */
+nav li:hover > .sub-menu {
+    display: block;
+}
 
 
 /* main header */
@@ -168,7 +177,7 @@ section h1 {
     line-height: 70%;
 }
 .main-header {
-    margin-top: -76px;
+    margin-top: 0px;
 }
 
 
@@ -181,20 +190,24 @@ section {
 /* horizontal tab */
 .horizontal-tab {
     text-align: center; /* Center align the title and the buttons */
+    margin-bottom: 30px;
     margin: auto;
 }
 
 .horizontal-tab-title {
     font-size: 30px; /* Size of the title */
     padding: 20px; /* Padding around the title */
-    color: #333; /* Text color of the title */
+    color: white; /* Text color of the title */
     font-weight: bold;
     font-family: 'Tenada', sans-serif;
+
+
 }
 
 .horizontal-tab-buttons {
     display: inline-block; /* Align the navigation tabs */
     margin-bottom: 20px; /* Space below the tabs */
+    
 }
 
 .horizontal-tab-buttons ul {
@@ -210,13 +223,14 @@ section {
 .horizontal-tab-buttons li a {
     padding: 10px 20px; /* Padding inside buttons */
     text-decoration: none;
-    color: #333; /* Text color for the buttons */
-    background-color: #ffffff; /* Button background color for a clean look */
+    color: white; /* Text color for the buttons */
+    background-color: transparent; /* Button background color for a clean look */
     border: 1px solid #ddd; /* Lighter border color for a subtle effect */
     border-radius: 5px; /* Rounded corners for buttons */
     transition: all 0.3s ease; /* Smooth transition for hover effects */
     box-shadow: none; /* Remove box-shadow for a flatter look */
     font-family: 'Tenada', sans-serif;
+
 }
 
 .horizontal-tab-buttons li a:hover {
@@ -240,6 +254,41 @@ section {
     animation: fadeIn 0.5s 0s ease-in forwards;
 }
 
+h2, ul {
+    font-family: 'Tenada', sans-serif;
+    color: white; /* Adjust the color as needed (this is red) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+    font-weight: 300;
+    font-size: 20px;
+    font-weight: bold;
+}
+h1, .vertical-tab {
+    -webkit-animation: fadeIn 0.5s 0s ease-in forwards;
+    animation: fadeIn 0.5s 0s ease-in forwards;
+}
+
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(0, 4px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+  
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(0, 4px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+}
 h2, ul {
     font-family: 'Tenada', sans-serif;
     color: black; /* Adjust the color as needed (this is red) */
@@ -278,11 +327,13 @@ h1, .vertical-tab {
 
 /* content container */
 .content-container {
-    background-color: white; /* Background color for the container */
+    background-color:  rgb(22,33,26,1); /* Background color for the container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow for the container */
     margin: 20px auto; /* Add margins on the top and bottom, and auto for left and right to center the container */
     max-width: 1280px; /* Set a maximum width for the container */
     margin-top: 63px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 .content-container::after {
     content: "";
@@ -292,7 +343,7 @@ h1, .vertical-tab {
 
 .content-container p1 {
     font-family: 'ONE Mobile Title', sans-serif;
-    color: black; /* Adjust the color as needed (this is red) */
+    color: white; /* Adjust the color as needed (this is red) */
     font-weight: 300;
     font-size: 33px;
     font-weight: lighter;
@@ -304,57 +355,6 @@ h1, .vertical-tab {
 
 
 @media (max-width: 1080px) {
-    .main-header h1 {
-        font-size: 150px;
-    }
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .menu-bar {
-        width: 95%;
-        /* Make the menu bar fill the container width */
-        text-align: center;
-        justify-content: center;
-    }
-
-    nav>ul {
-        flex-direction: row;
-        /* Display menu items in a row */
-        justify-content: center;
-        /* Center align the menu items horizontally */
-        width: 95%;
-        /* Make the menu items fill the container width */
-        flex-wrap: wrap;
-        /* Allow menu items to wrap to the next line */
-    }
-
-    nav>ul>li {
-        margin-bottom: 30px;
-
-    }
-    nav ul ul {
-        left: -100px;
-        /* adjust position */
-    }
-
-    .header-image {
-        margin-top: 70px;
-        margin-left: auto;
-    }
-
-    .main-header {
-        margin-top: 40px;
-        margin-bottom: -40px;
-    }
-    .main-header h1 {
-        font-size: 40px;
-    }
-
-
-
     .image-group {
         display: flex;
         flex-wrap: wrap;
@@ -377,7 +377,7 @@ h1, .vertical-tab {
     .horizontal-tab-title {
         font-size: 25px; /* Size of the title */
         padding: 20px; /* Padding around the title */
-        color: #333; /* Text color of the title */
+        color: white; /* Text color of the title */
         font-weight: bold;
         font-family: 'Tenada', sans-serif;
     }
@@ -527,7 +527,7 @@ h1, .vertical-tab {
   
 
 body {
-    background-color: #F0F5FE;
+    background-color: rgb(22,33,26,1);;
     font-family: -apple-system, helvetica, Sans-serif;
 }
   
@@ -745,10 +745,7 @@ h1, h2 {
     .content-container .text-column2 {
         margin-left: 30px;
     }
-    .slide-image, .top-bar, .menu {
-        display: block;
-    }
-    .background-image, .header-container, .main-header {
+    .menu-bar {
         display: none;
     }
     
@@ -757,14 +754,6 @@ h1, h2 {
         width: 100%;
         margin-bottom: -65px;
     }
-    .top-bar {
-        background-color: #7895B2;
-        color: #394867;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
       .menu-icon {
         cursor: pointer;
         font-size: 30px;
@@ -817,9 +806,455 @@ h1, h2 {
         margin-left: 15px;
         font-size: 15px;
       }
-      .header-image {
+      .content-container {
+        margin-top: 100px;
+    }
+    .header-container {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        flex-direction: row;
+    }
+    .menu-icon {
+        display: block;
+        cursor: pointer; 
+        font-size: 30px;
+        color: whitesmoke;
+        margin-bottom: 0px;
+        margin-right: 50px;
+        background-color: transparent;
+    }
+
+    .header-image {
+        margin-top: 0px;
+        display: block; /* Ensures the image is a block-level element */
+        max-height: 100%; /* Ensures the image is not taller than the header */
+        width: auto; /* Keeps image aspect ratio */
         max-width: 150px;
         margin-top: 5px;
-        margin-left: 5px;
+        margin-left: 0px;
+    }
+}
+@media (max-width: 1440px) {
+    .background-image {
+        height: 1080px;
+    }
+
+    /* top bar */
+    .header-container {
+        height: 80px;
+    }
+
+    .header-image {
+        width: 150px;
+    }
+
+    /* Menu Bar Configuration */
+    .menu-bar {
+        margin-left: 0px;
+        max-width: 1080px;
+    }
+
+    nav > ul > li {
+        margin: -15px;
+    }
+
+    nav > ul > li > a {
+        font-size: 13px;
+    }
+
+    .sub-menu a {
+        font-size: 12px;
+    }
+}
+@media (max-width: 1080px) {
+
+    .main-header {
+        margin-top: 40px;
+        margin-bottom: -40px;
+    }
+    .main-header h1 {
+        font-size: 40px;
+    }
+    .photo-text {
+        float: center;
+        max-width: 95%;
+    }
+    .photo-text img {
+        float: right;
+        max-width: 30%;
+        height: auto;
+        margin-top: 100px;
+        margin-left: 30px;
+    }
+    .text-column1 {
+        max-width: 50%;
+        margin-left: 100px;
+        float: left; /* Float the text column to the left */
+    }
+    .text-column2 {
+        float: left; /* Float the text column to the left */
+        max-width: 80%; /* Set the width of the text column */
+        margin-left: 100px; /* Add margin between text and photo column */
+    }
+
+
+
+    .text-column3 {
+        max-width: 90%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin: 0;
+        margin-left: 50px;
+    }
+    .text-column4 {
+        width: 80%;
+        margin-left: 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .text-column5 {
+        width: 100%;
+        margin-left: -50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+
+
+    .content-container iframe {
+        width: 80%;
+        height: auto;
+        aspect-ratio: 1/1;
+        margin: 20px auto;
+        padding-bottom: 30px;
+    }
+    
+    /* direction image */
+    .coming-image {
+        width: 70%;
+        height: auto;
+        float: center;
+        margin-left: 15%;
+    }
+
+    .image-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .content {
+        width: 100%; /* Set the width to 100% to make it responsive */
+        max-width: 400px; /* You can set a max-width if needed */
+        max-height: 300px;
+        margin-left: 0;
+        height: auto; /* Allow the height to adjust automatically */
+        margin-right: 0;
+    }
+    p1 {
+        font-size:  30px;
+    }
+    p2 {
+        font-size:  25px;
+    }
+    p3 {
+        font-size:  20px;
+
+    }
+
+}
+
+@media (max-width: 800px) {
+    .background-image {
+        height: 1080px;
+    }
+
+    /* top bar */
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+    }
+
+    .header-image {
+        width: 150px;
+        margin-top: -30px;
+        margin-bottom: 10px;
+    }
+
+    /* Menu Bar Configuration */
+    .menu-bar {
+        width: 95%;
+        /* Make the menu bar fill the container width */
+        text-align: center;
+        justify-content: center;
+        margin-left: 0px;
+        max-width: 500px;
+    }
+    nav>ul {
+        flex-direction: row;
+        /* Display menu items in a row */
+        justify-content: center;
+        /* Center align the menu items horizontally */
+        width: 100%;
+        /* Make the menu items fill the container width */
+    }
+
+    nav > ul > li {
+        margin: -20px;
+    }
+    
+
+    nav > ul > li > a {
+        font-size: 11px;
+    }
+
+    .sub-menu a {
+        font-size: 10px;
+    }
+    .horizontal-tab-title {
+        font-size: 25px; /* Size of the title */
+        padding: 20px; /* Padding around the title */
+        font-weight: bold;
+        font-family: 'Tenada', sans-serif;
+    }
+    .horizontal-tab-buttons li a {
+        padding: 5px 10px; /* Padding inside buttons */
+        text-decoration: none;
+        border: 1px solid #ddd; /* Lighter border color for a subtle effect */
+        border-radius: 5px; /* Rounded corners for buttons */
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+        box-shadow: none; /* Remove box-shadow for a flatter look */
+        font-family: 'Tenada', sans-serif;
+        font-size: 18px;;
+    }
+    
+    .photo-text .text-column1 {
+        max-width: 100% - 50px;
+        float: center;
+        margin: 0;
+        margin-left: 50px;
+        padding: 0;
+    }
+    
+    .content-container .text-column2 {
+        max-width: 100% - 50px;
+        float: center;
+        margin: 0;
+        margin-left: 50px;
+        padding: 0;
+    }
+    .photo-text img {
+        float: none;
+        width: 300px;
+        margin: 30px 30px;
+    }
+    .text-column1 {
+        max-width: 90%;
+        margin-left: 100px;
+        float: left; /* Float the text column to the left */
+    }
+    .content {
+        width: 100%; /* Set the width to 100% to make it responsive */
+        max-width: 300px; /* You can set a max-width if needed */
+        max-height: 200px;
+        margin-left: 0;
+        height: auto; /* Allow the height to adjust automatically */
+        margin-right: 0;
+    }
+    p1{
+        font-size:  30px;
+    }
+    p2 {
+        font-size:  20px;
+    }
+    p3 {
+        font-size:  15px;
+
+    }
+    
+}
+
+
+
+@media (max-width: 500px) {
+    .text-column1, .text-column2, .text-column3 {
+        margin-left: 30px;
+    }
+
+    p1 {
+        font-size:  20px;
+    }
+    p2 {
+        font-size:  17px;
+    }
+    p3 {
+        font-size:  13px;
+
+    }
+
+
+    .background-image {
+        background-position-x: -390px;
+    }
+    nav > ul {
+        width: 400px; /* Make the menu items fill the container width */
+    }
+    .main-header h1 {
+        font-size: 30px;
+    }
+    .horizontal-tab-title {
+        font-size: 20px; /* Size of the title */
+    }
+    .horizontal-tab-buttons li a {
+        font-size: 13px;
+    }
+    .content-title, .content-text {
+        font-size: 12px;
+    }
+    .content {
+        width: 100%; /* Set the width to 100% to make it responsive */
+        max-width: 300px; /* You can set a max-width if needed */
+        max-height: 150px;
+        margin-left: 0;
+        height: auto; /* Allow the height to adjust automatically */
+        margin-right: 0;
+    }
+    .content .content-image {
+        width: 150%;
+        height: auto;
+        margin-left: -20%;
+    }
+}
+
+@media (max-width: 499px) {
+    .content-container {
+        margin-top: 100px;
+    }
+    .header-container {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        flex-direction: row;
+    }
+    .menu-icon {
+        display: block;
+        cursor: pointer; 
+        font-size: 30px;
+        color: whitesmoke;
+        margin-bottom: 0px;
+        margin-right: 50px;
+        background-color: transparent;
+    }
+
+    .header-image {
+        margin-top: 0px;
+        display: block; /* Ensures the image is a block-level element */
+        max-height: 100%; /* Ensures the image is not taller than the header */
+        width: auto; /* Keeps image aspect ratio */
+        max-width: 150px;
+        margin-top: 5px;
+        margin-left: 0px;
+    }
+
+    nav>ul {
+        flex-direction: row;
+        /* Display menu items in a row */
+        justify-content: center;
+        /* Center align the menu items horizontally */
+        width: 80%;
+        /* Make the menu items fill the container width */
+        flex-wrap: wrap;
+    }
+
+    nav>ul>li {
+        margin-bottom: 40px;
+
+    }
+    .horizontal-tab-title {
+        font-size: 7vw; /* Size of the title */
+        font-weight: lighter;
+    }
+    .horizontal-tab-buttons li a {
+        font-size: 3vw;
+        font-weight: lighter;
+    }
+    .photo-text .text-column1 {
+        margin-left: 30px;
+    }
+    
+    .content-container .text-column2 {
+        margin-left: 30px;
+    }
+    
+    .menu-bar {
+        display: none;
+    }
+    .background-image {
+        margin-bottom: 0px;
+    }
+    
+    .top-bar {
+        background-color: rgba(120, 149, 178, 0.3);
+        color: #394867;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
       }
+
+      .menu {
+        display: none;
+        position: absolute;
+        top: 97px;
+        left: 0;
+        right: 0;
+        background-color: rgba(241, 240, 232, 0.95);
+        color: white;
+        padding: 15px;
+        box-sizing: border-box;
+        z-index: 1000;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: -20px;
+      }
+      .menu-column {
+        flex: 1;
+        max-width: calc(50% - 20px); /* Adjust the width for spacing */
+      }
+      .menu-section {   
+        margin-bottom: 0px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .menu-section h2 {
+        margin: 0 0 10px 0;
+        padding: 0;
+        font-size: 18px;
+        color: #7895B2;
+        font-family: 'ONE Mobile Title', sans-serif;
+        font-weight: lighter;
+        text-align: left;
+      }
+      .menu-section a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        margin: 5px 0;
+        color: #7895B2;
+        font-family: 'ONE Mobile', sans-serif;
+        text-align: left;
+        margin-left: 15px;
+        font-size: 15px;
+      }
+
 }
