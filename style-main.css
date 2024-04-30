@@ -606,6 +606,12 @@ section {
         max-width: 280px;
         margin: auto;
     }
+    .youtube-video-container .youtube-video {
+        border-radius: 30px;
+    }
+    .youtube-video iframe {
+        border-radius: 30px;
+    }
 
     .first-row iframe {
         width: 250px;
