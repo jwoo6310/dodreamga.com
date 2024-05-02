@@ -327,7 +327,6 @@ section {
 .icon-stack img {
     width: 150px;
     height: 150px;
-
 }
 
 /* fade-in */
@@ -549,6 +548,7 @@ section {
     .intro-row .youtube-video-container {
         display: none;
     }
+
     .youtube-mobile-container {
         max-width: 90%;
         margin: 0 auto;
@@ -596,9 +596,7 @@ section {
         margin-bottom: 30px;
         margin-left: 30px;
     }
-
-    /* album */
-
+    
     /* sns icons */
     .icon-stack {
         margin-left: 0px;
@@ -616,9 +614,6 @@ section {
     .menu-section {   
         padding: 10px;
     }
-    
-
-    
 
     /* album */
     .gallery {
@@ -633,7 +628,8 @@ section {
     }
 
     .photo:nth-child(1) img, .photo:nth-child(1) .overlay {
-        border-top-left-radius: 0px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
     }
     
     .photo:nth-child(2) img, .photo:nth-child(2) .overlay {
@@ -645,7 +641,7 @@ section {
     }
     
     .photo:nth-child(4) img, .photo:nth-child(4) .overlay {
-        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
     }
-    
 }
