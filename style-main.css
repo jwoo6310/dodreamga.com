@@ -59,15 +59,17 @@
 * {
     box-sizing: border-box;
 }
-.time-image, .map-mobile {
+
+.menu, .menu-icon, .map-mobile {
     display: none;
 }
-.all {
-    display: none;
+
+.map-iframe {
+    border: 0;
+    width: 100%;
+    height: 300px;
 }
-.top-bar, .menu, .slide-image {
-    display: none;
-}
+
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
@@ -76,6 +78,7 @@ body {
     text-align: center;
     background-color: rgb(22,33,26,1);
 }
+
 .background-image {
     position: absolute;
     width: 100%;
@@ -88,7 +91,6 @@ body {
     margin-top: 0px;
 }
 
-/* top bar */
 .header-container {
     width: 100%;
     height: 100px;
@@ -97,21 +99,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
     background-color: rgba(128, 128, 128, 0.5);
-
 }
+
 .header-image {
     width: 200px;
 }
-/* Menu Bar Configuration */
-.menu-bar {
+
+.menu-main {
     display: flex;
     align-items: center;
     margin-left: 30px;
 }
 
-/* Navigation: Reset list styles and set flex properties */
 nav > ul {
     list-style: none;
     margin: 0;
@@ -121,7 +122,6 @@ nav > ul {
     max-width: 1280px;
 }
 
-/* General link styling */
 nav a {
     color: white;
     font-family: 'Tenada', sans-serif;
@@ -131,9 +131,8 @@ nav a {
     transition: color 0.3s; /* Smooth color transition */
 }
 
-/* Main menu links */
 nav > ul > li {
-    position: relative; /* Ensures that submenu is positioned relative to these items */
+    position: relative;
     margin: 20px;
 }
 
@@ -203,8 +202,7 @@ section {
     flex-wrap: wrap;
     margin: 0 auto;
     max-width: 1280px;
-    margin-bottom: 0px;
-    margin-top: -150px;
+    margin-bottom: -150px;
 }
 
 .hours {
@@ -212,16 +210,12 @@ section {
     opacity: 0.95;
 }
 
-/* youtube */
 .youtube-video-container {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    /* Center the video container horizontally */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Add a box shadow for the container */
-    background-color: white;
-    /* Add a white background to the container */
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    background-color: rgb(22,33,26,1);
     margin-left: 80px;
     border-radius: 30px;
 }
@@ -229,7 +223,6 @@ section {
 .youtube-video {
     position: relative;
     padding-bottom: 56.25%;
-    /* Maintain a 16:9 aspect ratio for the video */
     height: 0;
     overflow: hidden;
 }
@@ -240,6 +233,7 @@ section {
     height: 100%;
     top: 0;
     left: 0;
+    border-radius: 30px;
 }
 
 /* first row */
@@ -272,7 +266,7 @@ section {
 .photo {
     position: relative;
     width: 400px;
-    overflow: hidden;  /* Keeps the border radius effect within the boundaries of the photo element */
+    overflow: hidden; 
     margin-bottom: -7px;
 }
 
@@ -382,7 +376,7 @@ section {
     }
 
     /* Menu Bar Configuration */
-    .menu-bar {
+    .menu-main {
         margin-left: 0px;
         max-width: 1080px;
     }
@@ -412,14 +406,12 @@ section {
         width: 250px;
     }
     
-    /* youtube */
     .youtube-video-container {
         max-width: 500px;
-        margin-left: 30px;
+        margin-left: 50px;
         margin-top: 10px;
     }
 
-    /* first row */
     .first-row {
         max-width: 800px;
         margin-top: 50px;
@@ -432,7 +424,6 @@ section {
         border-radius: 30px;
     }
 
-    /* album */
     .gallery {
         width: 500px;
     }
@@ -445,7 +436,6 @@ section {
         height: 200px;
     }
 
-    /* sns icons */
     .icon-stack {
         margin-left: -550px;
         margin-top: -100px;
@@ -458,137 +448,36 @@ section {
 }
 
 @media (max-width: 800px) {
+    .menu-main {
+        display: none;
+    }
+
     .background-image {
         height: 1080px;
     }
 
-    /* top bar */
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 150px;
-    }
-
-    .header-image {
-        width: 150px;
-        margin-top: -30px;
-        margin-bottom: 10px;
-    }
-
-    /* Menu Bar Configuration */
-    .menu-bar {
-        width: 95%;
-        /* Make the menu bar fill the container width */
-        text-align: center;
-        justify-content: center;
-        margin-left: 0px;
-        max-width: 500px;
-    }
-    nav>ul {
-        flex-direction: row;
-        /* Display menu items in a row */
-        justify-content: center;
-        /* Center align the menu items horizontally */
-        width: 100%;
-        /* Make the menu items fill the container width */
-    }
-
-    nav > ul > li {
-        margin: -20px;
-    }
-    
-
-    nav > ul > li > a {
-        font-size: 11px;
-    }
-
-    .sub-menu a {
-        font-size: 10px;
-    }
-
-    .main-header h1 {
-        font-size: 80px;
-    }
-
-    .intro-row {
-        max-width: 500px;
-        margin-top: -50px;
-    }
-    
-    .hours {
-        width: 170px;
-        margin-left: 10px;
-    }
-    
-    /* youtube */
-    .youtube-video-container {
-        max-width: 280px;
-        margin-left: 20px;
-        margin-top: 10px;
-    }
-
-    /* first row */
-    .first-row {
-        max-width: 500px;
-        margin-top: 50px;
-        flex-wrap: wrap;
-    }
-
-    .first-row iframe {
-        width: 400px;
-        height: 400px;
-        border-radius: 30px;
-        margin-bottom: 30px;
-        margin-left: 30px;
-    }
-
-    /* album */
-    .gallery {
-        width: 400px;
-    }
-
-    .photo {
-        width: 200px;
-    }
-
-    .photo img, .overlay {
-        height: 200px;
-    }
-
-    /* sns icons */
-    .icon-stack {
-        margin-left: 0px;
-        margin-top: 0px;
-    }
-
-    .icon-stack img {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-/* ---MOBILE SECTION--- */
-@media (max-width: 499px) {
     .header-container {
         height: 80px;
         justify-content: space-between;
         flex-direction: row;
         width: 100%;
     }
+
     .menu-icon {
         display: block;
         font-size: 30px;
         color: rgb(53, 53, 53);
         margin-right: 30px;
     }
+
     .header-image {
-        max-height: 100%; /* Ensures the image is not taller than the header */
-        width: auto; /* Keeps image aspect ratio */
+        max-height: 100%; 
+        width: auto;
         max-width: 130px;
         margin-top: 10px;
         margin-left: 10px;
     }
+
     .menu {
         display: none;
         position: absolute;
@@ -600,19 +489,18 @@ section {
         z-index: 333;
         width: 100%;
     }
+
     .menu-column {
         flex: 1;
         justify-content: center;
         align-items: center;
         max-width: 50%
     }
-    .menu-section {   
-        padding: 10px;
-    }
+
     .menu-section h2 {
         margin: 0 0 10px 0;
         padding: 0;
-        font-size: 4vw;
+        font-size: 3.5vw;
         color: #7895B2;
         font-family: 'ONE Mobile Title', sans-serif;
         font-weight: lighter;
@@ -620,6 +508,7 @@ section {
         text-shadow: 1px 1px 2px rgba(120, 149, 178, 0.3);
         opacity: 1;
     }
+    
     .menu-section a {
         text-decoration: none;
         display: block;
@@ -628,7 +517,7 @@ section {
         font-family: 'ONE Mobile', sans-serif;
         text-align: left;
         margin-left: 3vw;
-        font-size: 3.5vw;
+        font-size: 3vw;
         text-shadow: 1px 1px 2px rgba(120, 149, 178, 0.5);
         opacity: 1;
     }
@@ -639,8 +528,19 @@ section {
         font-size: 15vw;
     }
 
+    .main-header h1{
+        margin-top: 7vh;
+        margin-bottom: 10vh;
+        font-size: 15vw;
+    }
+
+    .intro-row {
+        max-width: 500px;
+        margin-top: -50px;
+    }
+    
     .intro-row .hours {
-        max-width: 300px;
+        max-width: 500px;
         width: 80%;
         height: auto;
         margin-bottom: 3vh;
@@ -652,17 +552,15 @@ section {
     .youtube-mobile-container {
         max-width: 90%;
         margin: 0 auto;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        /* Add a box shadow for the container */
-        background-color: white;
-        /* Add a white background to the container */
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+        background-color: rgb(22,33,26,1);
         border-radius: 30px;
+        margin-top: 150px;
     }
     
     .youtube-mobile {
         position: relative;
         padding-bottom: 56.25%;
-        /* Maintain a 16:9 aspect ratio for the video */
         height: 0;
         overflow: hidden;
         border-radius: 30px;
@@ -683,6 +581,44 @@ section {
         border-radius: 30px;
         margin-top: -30px;
     }
+
+    /* first row */
+    .first-row {
+        max-width: 500px;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+
+    .first-row iframe {
+        width: 400px;
+        height: 400px;
+        border-radius: 30px;
+        margin-bottom: 30px;
+        margin-left: 30px;
+    }
+
+    /* album */
+
+    /* sns icons */
+    .icon-stack {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .icon-stack img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* ---MOBILE SECTION--- */
+@media (max-width: 499px) {
+    .menu-section {   
+        padding: 10px;
+    }
+    
+
+    
 
     /* album */
     .gallery {
@@ -711,7 +647,5 @@ section {
     .photo:nth-child(4) img, .photo:nth-child(4) .overlay {
         border-bottom-right-radius: 0px;
     }
-    .menu-bar {
-        display: none;
-    }
+    
 }
