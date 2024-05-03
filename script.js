@@ -28,7 +28,7 @@ $(document).ready(function() {
   const channelId = 'UC-YSiZ8LPKGur2MVHN95slQ';
 
   // Fetch and embed YouTube video
-  const fetchVideo = async (targetElement) => {
+  const fetchVideo = async (targetElements) => {
     try {
         const response = await $.ajax({
             url: 'https://www.googleapis.com/youtube/v3/search',
@@ -47,17 +47,15 @@ $(document).ready(function() {
             const videoId = response.items[0].id.videoId;
             const embedUrl = `https://www.youtube.com/embed/${videoId}`;
             const iframe = `<iframe width="560" height="315" src="${embedUrl}" frameborder="0" allowfullscreen></iframe>`;
-            $(targetElement).html(iframe);
+            $(targetElements).html(iframe);
         }
     } catch (error) {
         console.error('Error fetching YouTube video:', error);
     }
 };
 
-// Usage:
-fetchVideo('.youtube-video');
-fetchVideo('.youtube-mobile');
-
+// Usage: Fetch video once and apply to both elements
+fetchVideo('.youtube-video, .youtube-mobile');
 
   // Toggle menu visibility
   const menu = document.getElementById("menu");
