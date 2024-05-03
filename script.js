@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* Youtube */
 $(document).ready(function() {
-  const apiKey = 'AIzaSyDNVB-FtBheiZx_4zaY0tC31Nc9VWaGmM0';
+  const apiKey = 'AIzaSyCsGt0RmRMHdgAsQA08GcTjUWKte9N6xAc';
   const channelId = 'UC-YSiZ8LPKGur2MVHN95slQ';
 
   // Fetch and embed YouTube video
