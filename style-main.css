@@ -550,6 +550,7 @@ section {
     }
 
     .youtube-mobile-container {
+        display: block;
         max-width: 90%;
         margin: 0 auto;
         box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
