@@ -202,7 +202,7 @@ section {
     flex-wrap: wrap;
     margin: 0 auto;
     max-width: 1280px;
-    margin-bottom: -150px;
+    margin-bottom: 0px;
 }
 
 .hours {
