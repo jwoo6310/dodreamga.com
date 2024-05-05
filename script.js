@@ -84,11 +84,12 @@ $(document).ready(function() {
 // Usage: Fetch video once and apply to both elements
 fetchVideo('.youtube-video, .youtube-mobile');
 
-  // Toggle menu visibility
-  const menu = document.getElementById("menu");
-  menu.style.display = 'none'; // Ensure the menu is hidden at start
-
-  window.toggleMenu = function() {
-    menu.style.display = menu.style.display === "none" ? "flex" : "none";
-  };
+  
 });
+// Toggle menu visibility
+const menu = document.getElementById("menu");
+menu.style.display = 'none'; // Ensure the menu is hidden at start
+
+window.toggleMenu = function() {
+  menu.style.display = menu.style.display === "none" ? "flex" : "none";
+};
