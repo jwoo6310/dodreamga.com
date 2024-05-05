@@ -20,27 +20,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let visibleBack = back1, hiddenBack = back2;
 
-  // Initial setup
+  // Load the initial image
   visibleBack.style.backgroundImage = `url('${images[currentIndex].src}')`;
+  visibleBack.style.opacity = 1;
+  hiddenBack.style.opacity = 0;
 
-  setInterval(function () {
+  // Function to handle the transition
+  function changeBackground() {
     currentIndex = (currentIndex + 1) % imageCount;
 
-    // Swap backgrounds
+    // Set the next image on the hidden background
     hiddenBack.style.backgroundImage = `url('${images[currentIndex].src}')`;
-    hiddenBack.style.zIndex = 2;
-    visibleBack.style.zIndex = 1;
-    // Fade effect
-    hiddenBack.style.opacity = 1;
-    visibleBack.style.opacity = 0;
 
-    // Swap roles
+    // Transition effect
+    visibleBack.style.opacity = 0;
+    hiddenBack.style.opacity = 1;
+
+    // Swap the roles of visible and hidden backgrounds
     let temp = visibleBack;
     visibleBack = hiddenBack;
     hiddenBack = temp;
-    sessionStorage.setItem("backgroundIndex", currentIndex);
-  }, 7000); // Change every 7 seconds
+  }
+
+  // Delay the first transition
+  setTimeout(function() {
+    setInterval(changeBackground, 7000); // Change every 7 seconds
+  }, 7000);
 });
+
 
 /* Youtube */
 $(document).ready(function() {

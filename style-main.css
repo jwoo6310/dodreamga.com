@@ -81,6 +81,7 @@ body {
     transition: background-image 1s ease-in-out;
     margin-top: 0px;
 }
+
 .background-cover {
     position: absolute;
     width: 100%;
