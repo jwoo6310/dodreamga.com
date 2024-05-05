@@ -45,7 +45,7 @@
     font-display: swap;
 }
 
-.top-bar, .menu-icon {
+.top-bar, .menu-icon, .menu {
     display: none;
 }
 
@@ -67,6 +67,7 @@ body {
     background-position: top center;
     z-index: -1;
     transition: background-image 3s ease-in-out;
+    margin-top: 0px;
 }
 
 .background-cover {
