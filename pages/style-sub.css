@@ -9,14 +9,7 @@
     font-style: normal;
     font-display: swap;
 }
-@font-face {
-    font-family: 'main-header';
-    src: url('../assets/fonts/awesome-webfont.woff2') format('woff2'),
-         url('../assets/fonts/awesome-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+
 @font-face {
     font-family: 'sub-header';
     src: url('../assets/fonts/TTOhneulbamR.woff2') format('woff2'),
@@ -25,6 +18,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'ONE Mobile Title';
     src: url('../assets/fonts/ONEMobileTitleRegular.woff2') format('woff2'),
@@ -42,6 +36,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Tenada';
     src: url('../assets/fonts/Tenada.woff2') format('woff2'),
@@ -50,10 +45,10 @@
     font-display: swap;
 }
 
-/* default */
-.top-bar, .menu-icon, .slide-image {
+.top-bar, .menu-icon {
     display: none;
 }
+
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
@@ -62,6 +57,7 @@ body {
     text-align: center;
     background-color: rgb(22,33,26,1);
 }
+
 .background-image {
     position: absolute;
     width: 100%;
@@ -71,7 +67,6 @@ body {
     background-position: top center;
     z-index: -1;
     transition: background-image 3s ease-in-out;
-    margin-top: 0px;
 }
 
 /* top bar */
@@ -91,14 +86,12 @@ body {
     width: 200px;
 }
 
-/* Menu Bar Configuration */
-.menu-bar {
+.main-menu {
     display: flex;
     align-items: center;
     margin-left: 30px;
 }
 
-/* Navigation: Reset list styles and set flex properties */
 nav > ul {
     list-style: none;
     margin: 0;
@@ -108,7 +101,6 @@ nav > ul {
     max-width: 1280px;
 }
 
-/* General link styling */
 nav a {
     color: white;
     font-family: 'Tenada', sans-serif;
@@ -118,7 +110,6 @@ nav a {
     transition: color 0.3s; /* Smooth color transition */
 }
 
-/* Main menu links */
 nav > ul > li {
     position: relative; /* Ensures that submenu is positioned relative to these items */
     margin: 20px;
@@ -135,7 +126,6 @@ nav > ul > li > a:hover {
     color: #555;
 }
 
-/* Sub-menu Configuration */
 .sub-menu {
     display: none;
     position: absolute;
@@ -146,7 +136,6 @@ nav > ul > li > a:hover {
     z-index: 1;
 }
 
-/* Sub-menu item styling */
 .sub-menu li {
     display: inline-block;
 }
@@ -160,34 +149,25 @@ nav > ul > li > a:hover {
     color: #555;
 }
 
-/* Display sub-menu on hover */
 nav li:hover > .sub-menu {
     display: block;
 }
 
-
-/* main header */
-section h1 {
+.main-header h1 {
     font-family: 'sub-header', sans-serif;
     font-size: 50px; /* Adjust the font size as needed */
     color: white; /* Adjust the color as needed (this is red) */
-    text-shadow: 7px 7px 10px rgb(245,221,162);
+    text-shadow: 7px 7px 7px rgb(22,33,26,1);
     font-weight: 500;
     padding: 0px;
     line-height: 70%;
 }
-.main-header {
-    margin-top: 0px;
-}
 
-
-
-/* section */
 section {
     position: relative;
     z-index: 2;
 }
-/* horizontal tab */
+
 .horizontal-tab {
     text-align: center; /* Center align the title and the buttons */
     margin-bottom: 30px;
@@ -199,14 +179,11 @@ section {
     color: white; /* Text color of the title */
     font-weight: bold;
     font-family: 'Tenada', sans-serif;
-
-
 }
 
 .horizontal-tab-buttons {
     display: inline-block; /* Align the navigation tabs */
     margin-bottom: 20px; /* Space below the tabs */
-    
 }
 
 .horizontal-tab-buttons ul {
@@ -291,13 +268,10 @@ h1, .vertical-tab {
 
 /* content container */
 .content-container {
-    background-color:  rgb(22,33,26,1); /* Background color for the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow for the container */
+    background-color:  rgb(22,33,26,0.9); /* Background color for the container */
     margin: 20px auto; /* Add margins on the top and bottom, and auto for left and right to center the container */
     max-width: 1280px; /* Set a maximum width for the container */
     margin-top: 63px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
 }
 .content-container::after {
     content: "";
@@ -379,12 +353,6 @@ p3 {
     text-align: left;
 }
 
-
-
-
-
-/* extra */
-
 /* google map */
 .content-container iframe {
     display: flex;
@@ -423,431 +391,7 @@ p3 {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-@media (max-width: 1440px) {
-    .background-image {
-        height: 1080px;
-    }
 
-    /* top bar */
-    .header-container {
-        height: 80px;
-    }
-
-    .header-image {
-        width: 150px;
-    }
-
-    /* Menu Bar Configuration */
-    .menu-bar {
-        margin-left: 0px;
-        max-width: 1080px;
-    }
-
-    nav > ul > li {
-        margin: -15px;
-    }
-
-    nav > ul > li > a {
-        font-size: 13px;
-    }
-
-    .sub-menu a {
-        font-size: 12px;
-    }
-}
-@media (max-width: 1080px) {
-
-    .main-header {
-        margin-top: 40px;
-        margin-bottom: -40px;
-    }
-    .main-header h1 {
-        font-size: 40px;
-    }
-    .photo-text {
-        float: center;
-        max-width: 95%;
-    }
-    .photo-text img {
-        float: right;
-        max-width: 30%;
-        height: auto;
-        margin-top: 100px;
-        margin-left: 30px;
-    }
-    .text-column1 {
-        max-width: 50%;
-        margin-left: 100px;
-        float: left; /* Float the text column to the left */
-    }
-    .text-column2 {
-        float: left; /* Float the text column to the left */
-        max-width: 80%; /* Set the width of the text column */
-        margin-left: 100px; /* Add margin between text and photo column */
-    }
-
-
-
-    .text-column3 {
-        max-width: 90%;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        margin: 0;
-        margin-left: 50px;
-    }
-    .text-column4 {
-        width: 80%;
-        margin-left: 50px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-    .text-column5 {
-        width: 100%;
-        margin-left: -50px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-
-
-
-    .content-container iframe {
-        width: 80%;
-        height: auto;
-        aspect-ratio: 1/1;
-        margin: 20px auto;
-        padding-bottom: 30px;
-    }
-    
-    /* direction image */
-    .coming-image {
-        width: 70%;
-        height: auto;
-        float: center;
-        margin-left: 15%;
-    }
-
-    .image-group {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    }
-    .content {
-        width: 100%; /* Set the width to 100% to make it responsive */
-        max-width: 400px; /* You can set a max-width if needed */
-        max-height: 300px;
-        margin-left: 0;
-        height: auto; /* Allow the height to adjust automatically */
-        margin-right: 0;
-    }
-    p1 {
-        font-size:  30px;
-    }
-    p2 {
-        font-size:  25px;
-    }
-    p3 {
-        font-size:  20px;
-
-    }
-
-}
-
-@media (max-width: 800px) {
-    .background-image {
-        height: 1080px;
-    }
-
-    /* top bar */
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 150px;
-    }
-
-    .header-image {
-        width: 150px;
-        margin-top: -30px;
-        margin-bottom: 10px;
-    }
-
-    /* Menu Bar Configuration */
-    .menu-bar {
-        width: 95%;
-        /* Make the menu bar fill the container width */
-        text-align: center;
-        justify-content: center;
-        margin-left: 0px;
-        max-width: 500px;
-    }
-    nav>ul {
-        flex-direction: row;
-        /* Display menu items in a row */
-        justify-content: center;
-        /* Center align the menu items horizontally */
-        width: 100%;
-        /* Make the menu items fill the container width */
-    }
-
-    nav > ul > li {
-        margin: -20px;
-    }
-    
-
-    nav > ul > li > a {
-        font-size: 11px;
-    }
-
-    .sub-menu a {
-        font-size: 10px;
-    }
-    .horizontal-tab-title {
-        font-size: 25px; /* Size of the title */
-        padding: 20px; /* Padding around the title */
-        font-weight: bold;
-        font-family: 'Tenada', sans-serif;
-    }
-    .horizontal-tab-buttons li a {
-        padding: 5px 10px; /* Padding inside buttons */
-        text-decoration: none;
-        border: 1px solid #ddd; /* Lighter border color for a subtle effect */
-        border-radius: 5px; /* Rounded corners for buttons */
-        transition: all 0.3s ease; /* Smooth transition for hover effects */
-        box-shadow: none; /* Remove box-shadow for a flatter look */
-        font-family: 'Tenada', sans-serif;
-        font-size: 18px;;
-    }
-    
-    .photo-text .text-column1 {
-        max-width: 100% - 50px;
-        float: center;
-        margin: 0;
-        margin-left: 50px;
-        padding: 0;
-    }
-    
-    .content-container .text-column2 {
-        max-width: 100% - 50px;
-        float: center;
-        margin: 0;
-        margin-left: 50px;
-        padding: 0;
-    }
-    .photo-text img {
-        float: none;
-        width: 300px;
-        margin: 30px 30px;
-    }
-    .text-column1 {
-        max-width: 90%;
-        margin-left: 100px;
-        float: left; /* Float the text column to the left */
-    }
-    .content {
-        width: 100%; /* Set the width to 100% to make it responsive */
-        max-width: 300px; /* You can set a max-width if needed */
-        max-height: 200px;
-        margin-left: 0;
-        height: auto; /* Allow the height to adjust automatically */
-        margin-right: 0;
-    }
-    p1{
-        font-size:  30px;
-    }
-    p2 {
-        font-size:  20px;
-    }
-    p3 {
-        font-size:  15px;
-
-    }
-    
-}
-
-
-
-@media (max-width: 500px) {
-    .text-column1, .text-column2, .text-column3 {
-        margin-left: 30px;
-    }
-
-    p1 {
-        font-size:  20px;
-    }
-    p2 {
-        font-size:  17px;
-    }
-    p3 {
-        font-size:  13px;
-
-    }
-
-
-    .background-image {
-        background-position-x: -390px;
-    }
-    nav > ul {
-        width: 400px; /* Make the menu items fill the container width */
-    }
-    .main-header h1 {
-        font-size: 30px;
-    }
-    .horizontal-tab-title {
-        font-size: 20px; /* Size of the title */
-    }
-    .horizontal-tab-buttons li a {
-        font-size: 13px;
-    }
-    .content-title, .content-text {
-        font-size: 12px;
-    }
-    .content {
-        width: 100%; /* Set the width to 100% to make it responsive */
-        max-width: 300px; /* You can set a max-width if needed */
-        max-height: 150px;
-        margin-left: 0;
-        height: auto; /* Allow the height to adjust automatically */
-        margin-right: 0;
-    }
-    .content .content-image {
-        width: 150%;
-        height: auto;
-        margin-left: -20%;
-    }
-}
-
-@media (max-width: 499px) {
-    .content-container {
-        margin-top: 100px;
-    }
-    .header-container {
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
-        width: 100%;
-    }
-    .menu-icon {
-        display: block;
-        cursor: pointer; 
-        font-size: 30px;
-        color: whitesmoke;
-        margin-bottom: 0px;
-        margin-right: 50px;
-        background-color: transparent;
-        box-sizing: border-box;
-        
-    }
-
-    .header-image {
-        margin-top: 0px;
-        display: block; /* Ensures the image is a block-level element */
-        max-height: 100%; /* Ensures the image is not taller than the header */
-        width: auto; /* Keeps image aspect ratio */
-        max-width: 150px;
-        margin-top: 5px;
-        margin-left: 0px;
-    }
-
-    nav>ul {
-        flex-direction: row;
-        /* Display menu items in a row */
-        justify-content: center;
-        /* Center align the menu items horizontally */
-        width: 80%;
-        /* Make the menu items fill the container width */
-        flex-wrap: wrap;
-    }
-
-    nav>ul>li {
-        margin-bottom: 40px;
-
-    }
-    .horizontal-tab-title {
-        font-size: 7vw; /* Size of the title */
-        font-weight: lighter;
-    }
-    .horizontal-tab-buttons li a {
-        font-size: 3vw;
-        font-weight: lighter;
-    }
-    .photo-text .text-column1 {
-        margin-left: 30px;
-    }
-    
-    .content-container .text-column2 {
-        margin-left: 30px;
-    }
-    
-    .menu-bar {
-        display: none;
-    }
-    .background-image {
-        margin-bottom: 0px;
-    }
-    
-    .top-bar {
-        background-color: rgba(120, 149, 178, 0.3);
-        color: #394867;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 80px;
-      }
-
-      .menu {
-        display: none;
-        position: absolute;
-        top: 97px;
-        left: 0;
-        right: 0;
-        background-color: rgba(241, 240, 232, 0.95);
-        color: white;
-        padding: 15px;
-        box-sizing: border-box;
-        z-index: 1000;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-top: -20px;
-        width: 100%;
-      }
-      .menu-column {
-        flex: 1;
-        max-width: calc(50% - 20px); /* Adjust the width for spacing */
-      }
-      .menu-section {   
-        margin-bottom: 0px;
-        padding: 10px;
-        border-radius: 5px;
-      }
-      .menu-section h2 {
-        margin: 0 0 10px 0;
-        padding: 0;
-        font-size: 18px;
-        color: #7895B2;
-        font-family: 'ONE Mobile Title', sans-serif;
-        font-weight: lighter;
-        text-align: left;
-      }
-      .menu-section a {
-        color: white;
-        text-decoration: none;
-        display: block;
-        margin: 5px 0;
-        color: #7895B2;
-        font-family: 'ONE Mobile', sans-serif;
-        text-align: left;
-        margin-left: 15px;
-        font-size: 15px;
-      }
-
-}
-    
 .container {
     display: flex;
     flex-wrap: wrap; /* This allows items to wrap onto the next line */
@@ -880,6 +424,7 @@ p3 {
     -moz-transition: all 0.4s ease-in-out 0s;
     transition: all 0.4s ease-in-out 0s;
 }
+
 .content-details {
     position: absolute;
     text-align: center;
@@ -899,18 +444,18 @@ p3 {
     font-weight: bold;
 }
   
-  .content:hover .content-overlay {
+.content:hover .content-overlay {
     opacity: 1;
-  }
+}
   
-  .content-image {
+.content-image {
     height: 500px;
     width: auto;
     object-fit: cover;
     overflow: hidden;
-  }
+}
   
-  .content-details {
+.content-details {
     position: absolute;
     text-align: center;
     padding: 0;
@@ -925,15 +470,15 @@ p3 {
     -webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
-  }
+}
   
-  .content:hover .content-details {
+.content:hover .content-details {
     top: 50%;
     left: 50%;
     opacity: 1;
-  }
+}
   
-  .content-details h3 {
+.content-details h3 {
     color: #fff;
     letter-spacing: 0.15em;
     margin-bottom: 1em;
@@ -944,6 +489,428 @@ p3 {
     letter-spacing: 0.15em;
     font-size: 0.8em;
 }
-  .fadeIn-bottom {
+
+.fadeIn-bottom {
     top: 75%;
-  }
+}
+
+@media (max-width: 1440px) {
+    .background-image {
+        height: 1080px;
+    }
+
+    /* top bar */
+    .header-container {
+        height: 80px;
+    }
+
+    .header-image {
+        width: 150px;
+    }
+
+    /* Menu Bar Configuration */
+    .main-menu {
+        margin-left: 0px;
+        max-width: 1080px;
+    }
+
+    nav > ul > li {
+        margin: -15px;
+    }
+
+    nav > ul > li > a {
+        font-size: 13px;
+    }
+
+    .sub-menu a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .main-header {
+        margin-top: 40px;
+        margin-bottom: -40px;
+    }
+
+    .main-header h1 {
+        font-size: 40px;
+    }
+    
+    .photo-text {
+        float: center;
+        max-width: 95%;
+    }
+
+    .photo-text img {
+        float: right;
+        max-width: 30%;
+        height: auto;
+        margin-top: 100px;
+        margin-left: 30px;
+    }
+
+    .text-column1 {
+        max-width: 50%;
+        margin-left: 100px;
+        float: left; /* Float the text column to the left */
+    }
+
+    .text-column2 {
+        float: left; /* Float the text column to the left */
+        max-width: 80%; /* Set the width of the text column */
+        margin-left: 100px; /* Add margin between text and photo column */
+    }
+
+    .text-column3 {
+        max-width: 90%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin: 0;
+        margin-left: 50px;
+    }
+
+    .text-column4 {
+        width: 80%;
+        margin-left: 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .text-column5 {
+        width: 100%;
+        margin-left: -50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .content-container iframe {
+        width: 80%;
+        height: auto;
+        aspect-ratio: 1/1;
+        margin: 20px auto;
+        padding-bottom: 30px;
+    }
+    
+    .coming-image {
+        width: 70%;
+        height: auto;
+        float: center;
+        margin-left: 15%;
+    }
+
+    .image-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .content {
+        width: 100%; /* Set the width to 100% to make it responsive */
+        max-width: 300px; /* You can set a max-width if needed */
+        max-height: 300px;
+        margin-left: 0;
+        height: auto; /* Allow the height to adjust automatically */
+        margin-right: 0;
+    }
+
+    .content .content-image {
+        width: 150%;
+        height: auto;
+        margin-left: -25%;
+    }
+    
+    p1 {
+        font-size:  30px;
+    }
+    p2 {
+        font-size:  25px;
+    }
+    p3 {
+        font-size:  20px;
+
+    }
+
+}
+
+@media (max-width: 800px) {
+    .main-menu {
+        display: none;
+    }
+
+    .header-container {
+        height: 80px;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        color: rgb(53, 53, 53);
+        margin-right: 30px;
+    }
+
+    .header-image {
+        max-height: 100%; 
+        width: auto;
+        max-width: 130px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        background-color: rgba(241, 240, 232, 0.88);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10vw;
+        z-index: 333;
+        width: 100%;
+    }
+
+    .menu-column {
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        max-width: 50%
+    }
+
+    .menu-section h2 {
+        margin: 0 0 10px 0;
+        padding: 0;
+        font-size: 3.5vw;
+        color: #7895B2;
+        font-family: 'ONE Mobile Title', sans-serif;
+        font-weight: lighter;
+        text-align: left;
+        text-shadow: 1px 1px 2px rgba(120, 149, 178, 0.3);
+        opacity: 1;
+    }
+    
+    .menu-section a {
+        text-decoration: none;
+        display: block;
+        margin: 5px 0;
+        color: #7895B2;
+        font-family: 'ONE Mobile', sans-serif;
+        text-align: left;
+        margin-left: 3vw;
+        font-size: 3vw;
+        text-shadow: 1px 1px 2px rgba(120, 149, 178, 0.5);
+        opacity: 1;
+    }
+
+    .sub-menu a {
+        font-size: 10px;
+    }
+
+    .horizontal-tab-title {
+        font-size: 25px; /* Size of the title */
+        padding: 20px; /* Padding around the title */
+        font-weight: bold;
+        font-family: 'Tenada', sans-serif;
+    }
+
+    .horizontal-tab-buttons li a {
+        padding: 5px 10px; /* Padding inside buttons */
+        text-decoration: none;
+        border: 1px solid #ddd; /* Lighter border color for a subtle effect */
+        border-radius: 5px; /* Rounded corners for buttons */
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+        box-shadow: none; /* Remove box-shadow for a flatter look */
+        font-family: 'Tenada', sans-serif;
+        font-size: 18px;;
+    }
+    
+    .photo-text .text-column1 {
+        max-width: 100% - 50px;
+        float: center;
+        margin: 0;
+        margin-left: 50px;
+        padding: 0;
+    }
+    
+    .content-container .text-column2 {
+        max-width: 100% - 50px;
+        float: center;
+        margin: 0;
+        margin-left: 50px;
+        padding: 0;
+    }
+    
+    .photo-text img {
+        float: none;
+        width: 300px;
+        margin: 30px 30px;
+    }
+
+    .text-column1 {
+        max-width: 90%;
+        margin-left: 100px;
+        float: left; /* Float the text column to the left */
+    }
+
+    .content {
+        width: 100%; /* Set the width to 100% to make it responsive */
+        max-width: 300px; /* You can set a max-width if needed */
+        max-height: 200px;
+        margin-left: 0;
+        height: auto; /* Allow the height to adjust automatically */
+        margin-right: 0;
+    }
+
+    p1 {
+        font-size:  30px;
+    }
+
+    p2 {
+        font-size:  20px;
+    }
+
+    p3 {
+        font-size:  15px;
+    } 
+}
+
+
+
+@media (max-width: 500px) {
+    .text-column1, .text-column2, .text-column3 {
+        margin-left: 30px;
+    }
+
+    p1 {
+        font-size:  20px;
+    }
+
+    p2 {
+        font-size:  17px;
+    }
+
+    p3 {
+        font-size:  13px;
+
+    }
+
+    .main-header h1 {
+        font-size: 30px;
+    }
+
+    .horizontal-tab-title {
+        font-size: 20px; /* Size of the title */
+    }
+
+    .horizontal-tab-buttons li a {
+        font-size: 13px;
+    }
+
+    .content-title, .content-text {
+        font-size: 12px;
+    }
+
+    .content {
+        width: 100%; /* Set the width to 100% to make it responsive */
+        max-width: 300px; /* You can set a max-width if needed */
+        max-height: 150px;
+        margin-left: 0;
+        height: auto; /* Allow the height to adjust automatically */
+        margin-right: 0;
+    }
+
+    .content .content-image {
+        width: 150%;
+        height: auto;
+        margin-left: -25%;
+    }
+}
+
+@media (max-width: 499px) {
+    .content-container {
+        margin-top: 100px;
+    }
+
+    .horizontal-tab-title {
+        font-size: 7vw; /* Size of the title */
+        font-weight: lighter;
+    }
+
+    .horizontal-tab-buttons li a {
+        font-size: 3vw;
+        font-weight: lighter;
+    }
+
+    .photo-text .text-column1 {
+        margin-left: 30px;
+    }
+    
+    .content-container .text-column2 {
+        margin-left: 30px;
+    }
+    
+    .top-bar {
+        background-color: rgba(120, 149, 178, 0.3);
+        color: #394867;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 97px;
+        left: 0;
+        right: 0;
+        background-color: rgba(241, 240, 232, 0.95);
+        color: white;
+        padding: 15px;
+        box-sizing: border-box;
+        z-index: 1000;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: -20px;
+        width: 100%;
+    }
+
+    .menu-column {
+        flex: 1;
+        max-width: calc(50% - 20px); /* Adjust the width for spacing */
+    }
+
+    .menu-section {
+        margin-bottom: 0px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .menu-section h2 {
+        margin: 0 0 10px 0;
+        padding: 0;
+        font-size: 18px;
+        color: #7895B2;
+        font-family: 'ONE Mobile Title', sans-serif;
+        font-weight: lighter;
+        text-align: left;
+    }
+
+    .menu-section a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        margin: 5px 0;
+        color: #7895B2;
+        font-family: 'ONE Mobile', sans-serif;
+        text-align: left;
+        margin-left: 15px;
+        font-size: 15px;
+    }
+}
