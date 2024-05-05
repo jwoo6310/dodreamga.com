@@ -47,3 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(changeBackground, 7000); // Change every 7 seconds
   }, 7000);
 });
+
+// Toggle menu visibility
+const menu = document.getElementById("menu");
+menu.style.display = 'none'; // Ensure the menu is hidden at start
+
+window.toggleMenu = function() {
+  menu.style.display = menu.style.display === "none" ? "flex" : "none";
+};
