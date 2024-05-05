@@ -1,25 +1,45 @@
 // script.js
-/* Background Transition */
 document.addEventListener("DOMContentLoaded", function () {
-  const backgroundElement = document.querySelector(".background-image");
+  const backgroundContainer = document.querySelector(".background-image");
   let currentIndex = parseInt(sessionStorage.getItem("backgroundIndex"), 10) || 0;
-
-  // Preload images to avoid flickering during transitions
   const imageCount = 4;
+
+  // Create two divs for double buffering
+  const back1 = document.createElement("div");
+  const back2 = document.createElement("div");
+  back1.className = back2.className = "background-cover";
+  backgroundContainer.appendChild(back1);
+  backgroundContainer.appendChild(back2);
+
+  // Preload images
   const images = [];
-  for (let i = 1; i <= imageCount; i++) {
+  for (let i = 0; i < imageCount; i++) {
     images[i] = new Image();
-    images[i].src = `assets/image-background${i}.jpg`;
+    images[i].src = `assets/image-background${i + 1}.jpg`;
   }
 
-  // Apply the initial background image
-  backgroundElement.style.backgroundImage = `url('${images[currentIndex + 1].src}')`;
+  let visibleBack = back1, hiddenBack = back2;
+
+  // Initial setup
+  visibleBack.style.backgroundImage = `url('${images[currentIndex].src}')`;
 
   setInterval(function () {
     currentIndex = (currentIndex + 1) % imageCount;
-    backgroundElement.style.backgroundImage = `url('${images[currentIndex + 1].src}')`;
+
+    // Swap backgrounds
+    hiddenBack.style.backgroundImage = `url('${images[currentIndex].src}')`;
+    hiddenBack.style.zIndex = 2;
+    visibleBack.style.zIndex = 1;
+    // Fade effect
+    hiddenBack.style.opacity = 1;
+    visibleBack.style.opacity = 0;
+
+    // Swap roles
+    let temp = visibleBack;
+    visibleBack = hiddenBack;
+    hiddenBack = temp;
     sessionStorage.setItem("backgroundIndex", currentIndex);
-  }, 7000); // change every 7 seconds
+  }, 7000); // Change every 7 seconds
 });
 
 /* Youtube */
