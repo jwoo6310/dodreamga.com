@@ -84,6 +84,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     transition: opacity 1s ease-in-out;
+    z-index: -1;
 }
 
 /* top bar */
