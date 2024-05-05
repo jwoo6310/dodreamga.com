@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const images = [];
   for (let i = 0; i < imageCount; i++) {
     images[i] = new Image();
-    images[i].src = `assets/image-background${i + 1}.jpg`;
+    images[i].src = `../../assets/image-background${i + 1}.jpg`;
   }
 
   let visibleBack = back1, hiddenBack = back2;
