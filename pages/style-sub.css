@@ -390,10 +390,9 @@ p3 {
 
 /* hour image */
 .time-image img {
-    width: 1000px;
+    width: 40%;
     max-width: 95%;
-    margin-top: 30px;
-    margin-bottom: 30px; /* Let the height adjust automatically while maintaining aspect ratio */
+    margin-bottom: 100px; /* Let the height adjust automatically while maintaining aspect ratio */
 }
 
 /* vision image */
