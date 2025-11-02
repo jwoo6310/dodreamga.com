@@ -100,7 +100,7 @@ function applyTranslations(lang) {
 
 // Boot + UI interactions
 document.addEventListener('DOMContentLoaded', () => {
-    let currentLanguage = getQueryLang() || getStoredLang() || 'en';
+    let currentLanguage = getQueryLang() || getStoredLang() || 'ko';
     setStoredLang(currentLanguage);
     setGlobalLang(currentLanguage); // missionaries.js 
 
