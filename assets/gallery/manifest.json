@@ -1,6 +1,34 @@
 {
   "albums": [
     {
+      "slug": "2025 Thanksgiving",
+      "title": "2025 Thanksgiving",
+      "items": [
+        "IMG_6616.jpg",
+        "IMG_6617.jpg",
+        "IMG_6618.jpg",
+        "IMG_6619.jpg",
+        "IMG_6620.jpg",
+        "IMG_6621.jpg",
+        "IMG_6622.jpg",
+        "IMG_6623.jpg",
+        "IMG_6624.jpg",
+        "IMG_6625.jpg",
+        "IMG_6626.jpg",
+        "IMG_6627.jpg"
+      ]
+    },
+    {
+      "slug": "2025 집사 안수",
+      "title": "2025 집사 안수",
+      "items": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.png"
+      ]
+    },
+    {
       "slug": "2025 DoDream X TIA Taekwondo",
       "title": "2025 DoDream X TIA Taekwondo",
       "items": [
@@ -29,24 +57,6 @@
       ]
     },
     {
-      "slug": "2025 Thanksgiving",
-      "title": "2025 Thanksgiving",
-      "items": [
-        "IMG_6616.jpg",
-        "IMG_6617.jpg",
-        "IMG_6618.jpg",
-        "IMG_6619.jpg",
-        "IMG_6620.jpg",
-        "IMG_6621.jpg",
-        "IMG_6622.jpg",
-        "IMG_6623.jpg",
-        "IMG_6624.jpg",
-        "IMG_6625.jpg",
-        "IMG_6626.jpg",
-        "IMG_6627.jpg"
-      ]
-    },
-    {
       "slug": "2025 Youth",
       "title": "2025 Youth",
       "items": [
@@ -59,16 +69,6 @@
         "7.jpg",
         "8.jpg",
         "9.jpg"
-      ]
-    },
-    {
-      "slug": "2025 집사 안수",
-      "title": "2025 집사 안수",
-      "items": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg",
-        "4.png"
       ]
     },
     {
