@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const coverOf = (album) => {
     if (!album.items || !album.items.length) return null;
-    const cover = album.items.find(f => /^cover\.(jpe?g|png|webp|gif|avif)$/i.test(f.name || ''));
+    const cover = album.items.find(f => /^1\.(jpe?g|png|webp|gif|avif)$/i.test(f.name || ''));
     return cover || album.items[0];
   };
 
