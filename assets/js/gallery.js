@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const MANIFEST_URL = 'https://script.google.com/macros/s/AKfycbxFhkI9EdSqELSSp3PHq059n1B0eQ8A-BIAz2LoaYsNSTkk9yBbtF50ueLUhnPfgBhL/exec';
 
   // Google Drive image URL
-  const DRIVE_IMG = id => `https://drive.google.com/uc?export=view&id=${encodeURIComponent(id)}`;
+  const DRIVE_IMG = id => `https://drive.google.com/thumbnail?id=${encodeURIComponent(id)}&sz=w1600`;
 
   // DOM refs
   const grid = document.getElementById('album-grid');
