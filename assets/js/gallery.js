@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // 1) Web app URL 
-  const MANIFEST_URL = 'https://script.google.com/macros/s/AKfycbxFhkI9EdSqELSSp3PHq059n1B0eQ8A-BIAz2LoaYsNSTkk9yBbtF50ueLUhnPfgBhL/exec';
+  const MANIFEST_URL = 'https://script.google.com/macros/s/AKfycby6bx02Bei8NjNfVzY077ZY8R6H0bfe9k3vPnVMB2c-zBc6OANZTfLYdW-L_WnE-ZU/exec';
 
   // Google Drive image URL
   const DRIVE_IMG = id => `https://drive.google.com/thumbnail?id=${encodeURIComponent(id)}&sz=w1600`;
