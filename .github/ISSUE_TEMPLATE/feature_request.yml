@@ -1,0 +1,47 @@
+name: Feature request
+description: Suggest a new feature or improvement for the site.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the user need or pain point first, not the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How would you like to see this addressed? Sketches and examples help.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area of the site
+      multiple: true
+      options:
+        - Home / Landing
+        - About
+        - Community
+        - Events
+        - NextGen
+        - SMD / Missionaries
+        - Gallery
+        - Internationalization (i18n)
+        - CI / Deployment
+        - Other
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: I'm willing to help implement this
+        - label: This requires new backend (Apps Script, Sheets, etc.)
+        - label: This touches sensitive content (personal info, submissions)

@@ -1,0 +1,63 @@
+name: Bug report
+description: Report something that is broken or behaves unexpectedly on the site.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. The more specific you can be, the faster this can get fixed.
+  - type: input
+    id: page
+    attributes:
+      label: Page / URL
+      description: Which page on dodreamga.com shows the problem?
+      placeholder: https://dodreamga.com/about/greeting.html
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open …
+        2. Click …
+        3. Observe …
+    validations:
+      required: false
+  - type: dropdown
+    id: language
+    attributes:
+      label: Site language when bug occurred
+      options:
+        - 한국어 (Korean)
+        - English
+        - Either / both
+    validations:
+      required: false
+  - type: input
+    id: browser
+    attributes:
+      label: Browser & version
+      placeholder: Chrome 124, Safari 17, Samsung Internet …
+  - type: input
+    id: device
+    attributes:
+      label: Device / OS
+      placeholder: iPhone 15, Windows 11 desktop, Galaxy S23 …
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or console output (optional)

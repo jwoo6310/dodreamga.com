@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Church general inquiries
+    url: https://dodreamga.com/about/directions.html
+    about: For non-website questions, please contact the church directly rather than opening a GitHub issue.
