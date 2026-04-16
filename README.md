@@ -1,11 +1,11 @@
 # DoDream Baptist Church — dodreamga.com
 
-[![Deploy to GitHub Pages](https://github.com/jwoo6310/dodreamga.com/actions/workflows/deploy.yml/badge.svg)](https://github.com/jwoo6310/dodreamga.com/actions/workflows/deploy.yml)
 [![Quality Checks](https://github.com/jwoo6310/dodreamga.com/actions/workflows/quality.yml/badge.svg)](https://github.com/jwoo6310/dodreamga.com/actions/workflows/quality.yml)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://dodreamga.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Made with Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-The official website of **DoDream Baptist Church**, a bilingual (한국어 / English) Korean-American church community in Georgia. Built and maintained as a static, zero-backend site deployed through GitHub Pages.
+The official website of **DoDream Baptist Church**, a bilingual (한국어 / English) Korean-American church community in Georgia. Built and maintained as a static, zero-backend site deployed through Vercel.
 
 **Live site:** [https://dodreamga.com](https://dodreamga.com)
 
@@ -17,14 +17,14 @@ This site is multi-page static HTML styled with Tailwind CSS. It supports runtim
 
 ```mermaid
 flowchart LR
-    A[Visitor Browser] -->|HTTPS| B[GitHub Pages<br/>dodreamga.com]
+    A[Visitor Browser] -->|HTTPS| B[Vercel<br/>dodreamga.com]
     B --> C[Static HTML / CSS / JS]
     C -->|fetch manifest| D[Google Apps Script<br/>Web App]
     D --> E[(Google Drive<br/>Gallery Folders)]
     C --> F[Google Analytics<br/>gtag]
 
     G[Contributor] -->|git push / PR| H[GitHub Repo]
-    H -->|Actions workflow| B
+    H -->|auto-deploy| B
     H -->|Actions| I[Lighthouse CI<br/>Link Check<br/>HTML Validate]
 ```
 
@@ -38,8 +38,8 @@ The gallery is intentionally decoupled from the repo: adding photos is a drag-an
 - **Interactive map:** custom SVG world map with per-country click states
 - **Photo gallery backend:** Google Apps Script + Google Drive
 - **Analytics:** Google Analytics 4 (gtag.js)
-- **Hosting:** GitHub Pages with custom domain
-- **CI/CD:** GitHub Actions (deploy, Lighthouse CI, link check, HTML validation)
+- **Hosting:** [Vercel](https://vercel.com/) with custom domain
+- **CI/CD:** Vercel (auto-deploy on push) + GitHub Actions (Lighthouse CI, link check, HTML validation)
 
 ## Repository structure
 
@@ -89,7 +89,7 @@ Then open `http://localhost:8000`.
 
 ## Deployment
 
-Every push to `main` triggers `.github/workflows/deploy.yml`, which publishes the site to GitHub Pages. The custom domain `dodreamga.com` is configured through a `CNAME` file at the repo root.
+The site is hosted on [Vercel](https://vercel.com/), which auto-deploys every push to `main`. The custom domain `dodreamga.com` is configured through Vercel's dashboard. GitHub Actions runs quality checks (HTML validation, broken link detection, Lighthouse CI) on every push and PR, but deployment itself is handled entirely by Vercel.
 
 ## Contributing
 

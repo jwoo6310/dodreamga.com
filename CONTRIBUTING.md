@@ -27,7 +27,7 @@ Then visit `http://localhost:8000`.
 1. Create a feature branch from `main`: `git checkout -b feature/short-description` (use `fix/…` for bug fixes, `chore/…` for housekeeping).
 2. Make focused commits with present-tense, imperative messages ("Add prayer request form", not "added form"). Reference issues with `#123` in the body when relevant.
 3. Push the branch and open a pull request. The PR template will walk you through what to include.
-4. Wait for CI (deploy preview, Lighthouse CI, link check, HTML validation) to pass.
+4. Wait for CI (Vercel deploy preview, Lighthouse CI, link check, HTML validation) to pass.
 5. Request review, address feedback, then squash-merge into `main`.
 
 ## Adding a new page
