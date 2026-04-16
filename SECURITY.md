@@ -1,6 +1,4 @@
 # Security Policy
-
-<<<<<<< HEAD
 ## Scope
 
 This repository powers a static church website ([dodreamga.com](https://dodreamga.com)). It contains no user authentication, no database, and no server-side processing. The primary security concerns are:
@@ -26,24 +24,3 @@ You can expect an initial response within 7 days. We take all reports seriously 
 - The Google Apps Script web app URL in `assets/js/gallery.js` — this is a public read-only endpoint by design
 - The Google Analytics measurement ID — this is intended to be public
 - Church contact information visible on the site
-=======
-## Supported Versions
-
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
-
-## Reporting a Vulnerability
-
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
->>>>>>> e5f18d9f2a27a9b0141b4711e4daa04620eddad5
