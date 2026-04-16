@@ -1,0 +1,81 @@
+name: Quality Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  html-validate:
+    name: HTML Validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install htmlhint
+        run: npm install -g htmlhint
+
+      - name: Run htmlhint
+        run: htmlhint "**/*.html" --ignore "node_modules/**,archive/**"
+
+  link-check:
+    name: Broken Link Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restore lychee cache
+        uses: actions/cache@v4
+        with:
+          path: .lycheecache
+          key: cache-lychee-${{ github.sha }}
+          restore-keys: cache-lychee-
+
+      - name: Run lychee link checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >
+            --cache
+            --max-cache-age 1d
+            --no-progress
+            --exclude-path archive
+            --exclude-path node_modules
+            --accept 200,206,429
+            './**/*.html'
+          fail: false
+
+  lighthouse:
+    name: Lighthouse CI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install http-server
+        run: npm install -g http-server
+
+      - name: Serve site
+        run: |
+          http-server . -p 8080 --silent &
+          sleep 2
+
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            http://localhost:8080/
+            http://localhost:8080/about/greeting.html
+            http://localhost:8080/nextgen/gallery.html
+          uploadArtifacts: true
+          temporaryPublicStorage: true
