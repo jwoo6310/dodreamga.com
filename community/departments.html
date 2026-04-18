@@ -2,6 +2,23 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+    <!-- early-lang-probe -->
+    <script>
+        (function () {
+            try {
+                var m = location.search.match(/[?&]lang=(ko|en)\b/i);
+                var lang = m ? m[1].toLowerCase() : (localStorage.getItem('lang') || 'ko');
+                if (lang === 'en') {
+                    document.documentElement.classList.add('pending-translation');
+                    // Failsafe: if script.js never runs, reveal the page anyway.
+                    setTimeout(function () {
+                        document.documentElement.classList.remove('pending-translation');
+                    }, 2000);
+                }
+            } catch (e) {}
+        })();
+    </script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="color-scheme" content="light">
         <title>DoDream Baptist Church</title>
@@ -362,27 +379,27 @@
                                 <h4 id="missions-activities-title" class="text-xl font-medium text-brand mb-4">선교 활동</h4>
                                 <ul class="space-y-3 text-slate-700">
                                     <li class="flex items-start">
-                                        <i data-feather="book" class="text-brand-700 mr-2"></i>
+                                        <i data-feather="book" class="text-brand-700 mr-2 w-5 h-5 flex-shrink-0 mt-1"></i>
                                         <span id="missions-1">선교지를 위한 제자 훈련 교제 제작 (DTC, LTC공과 와 강의안)</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <i data-feather="globe" class="text-brand-700 mr-2"></i>
+                                        <i data-feather="globe" class="text-brand-700 mr-2 w-5 h-5 flex-shrink-0 mt-1"></i>
                                         <span id="missions-2">공과는 스페인어와 영어로 번역되었고 중국어, 캄보디아어, 라오스어, 태국어, 베트남어 그리고 미얀마 어로 번역 중</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <i data-feather="map" class="text-brand-700 mr-2"></i>
+                                        <i data-feather="map" class="text-brand-700 mr-2 w-5 h-5 flex-shrink-0 mt-1"></i>
                                         <span id="missions-6">선교 여행</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <i data-feather="send" class="text-brand-700 mr-2"></i>
+                                        <i data-feather="send" class="text-brand-700 mr-2 w-5 h-5 flex-shrink-0 mt-1"></i>
                                         <span id="missions-3">단기 선교사 파송 12회, 중장기 3기, 장기 1기 파송</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <i data-feather="users" class="text-brand-700 mr-2"></i>
+                                        <i data-feather="users" class="text-brand-700 mr-2 w-5 h-5 flex-shrink-0 mt-1"></i>
                                         <span id="missions-4">1년에 한 번 인도차이나 선교사님 세미나</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <i data-feather="award" class="text-brand-700 mr-2"></i>
+                                        <i data-feather="award" class="text-brand-700 mr-2 w-5 h-5 flex-shrink-0 mt-1"></i>
                                         <span id="missions-5">2년에 한 번 태국의 신동운 선교사님 목회 신학원 강의</span>
                                     </li>
                                 </ul>
