@@ -375,7 +375,7 @@ document.addEventListener('DOMContentLoaded', function () {
           src="https://flagcdn.com/w320/${code}.png"
           srcset="https://flagcdn.com/w320/${code}.png 1x, https://flagcdn.com/w640/${code}.png 2x"
           alt="Flag of ${countryName}"
-          class="w-48 h-32 object-cover rounded border border-gray-200"
+          class="w-48 h-32 object-contain rounded border border-gray-200 bg-white"
           loading="lazy"
           referrerpolicy="no-referrer"
         />`;
