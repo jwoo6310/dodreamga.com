@@ -107,6 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTranslations(currentLanguage);
     syncLinksWithLang(currentLanguage);
 
+    // Reveal page now that translations have been applied (avoids KO -> EN flash)
+    document.documentElement.classList.remove('pending-translation');
+
     // Desktop toggle
     const languageToggle = document.getElementById('language-toggle');
     if (languageToggle) {
