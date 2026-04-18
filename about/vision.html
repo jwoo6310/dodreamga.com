@@ -2,6 +2,23 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+    <!-- early-lang-probe -->
+    <script>
+        (function () {
+            try {
+                var m = location.search.match(/[?&]lang=(ko|en)\b/i);
+                var lang = m ? m[1].toLowerCase() : (localStorage.getItem('lang') || 'ko');
+                if (lang === 'en') {
+                    document.documentElement.classList.add('pending-translation');
+                    // Failsafe: if script.js never runs, reveal the page anyway.
+                    setTimeout(function () {
+                        document.documentElement.classList.remove('pending-translation');
+                    }, 2000);
+                }
+            } catch (e) {}
+        })();
+    </script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="color-scheme" content="light">
         <title>DoDream Baptist Church</title>
@@ -232,7 +249,7 @@
             <div class="container mx-auto px-4 py-8 pt-32 md:pt-24">
                 <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
                     <div class="md:flex">
-                        <div class="relative w-full aspect-[16/9]">
+                        <div class="relative w-full aspect-[16/9] video-frame">
                             <iframe
                                 class="absolute inset-0 w-full h-full"
                                 src="https://www.youtube.com/embed/4WGic-kv7GY?autoplay=0&rel=0&modestbranding=1"

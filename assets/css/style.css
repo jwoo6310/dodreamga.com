@@ -20,3 +20,27 @@
 
 :root { color-scheme: light; }
 html, body { background: #fff; color: #000; }
+
+/* Video containers: remove native <video> baseline gap and crop any baked-in
+   black side-bars from the source MP4 / YouTube chrome so edges render flush
+   against the card. Applies to both <video> and YouTube <iframe> children. */
+.video-frame { overflow: hidden; line-height: 0; background: #fff; }
+.video-frame > video {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #fff;
+    transform: scaleX(1.015);
+    transform-origin: center;
+}
+.video-frame iframe {
+    display: block;
+    background: #fff;
+    transform: scaleX(1.015);
+    transform-origin: center;
+}
+
+/* Prevent brief Korean -> English flash on page load.
+   The early-lang probe sets html.pending-translation if the stored/URL
+   language is English; script.js removes it once applyTranslations runs. */
+html.pending-translation body { visibility: hidden; }
