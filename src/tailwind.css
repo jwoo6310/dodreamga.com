@@ -1,0 +1,8 @@
+/*
+ * Tailwind input file — compiled by `npm run build` to assets/css/tailwind.css.
+ * Site-specific custom rules live in assets/css/style.css and are loaded
+ * AFTER this file so they can override Tailwind utilities when needed.
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -25,6 +25,12 @@ build/
 .tmp/
 *.log
 
+# Tailwind CLI output (built by `npm run build`, not source)
+assets/css/tailwind.css
+
+# Vercel local dev / build cache
+.vercel/
+
 # Local env / secrets — never commit
 .env
 .env.local

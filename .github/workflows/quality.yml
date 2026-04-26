@@ -8,6 +8,39 @@ on:
   workflow_dispatch:
 
 jobs:
+  build-css:
+    name: Build CSS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Tailwind CSS
+        run: npm run build
+
+      - name: Verify build output exists and is non-trivial
+        run: |
+          test -f assets/css/tailwind.css
+          # Sanity check: a real Tailwind build is well over 1KB even after purge.
+          size=$(wc -c < assets/css/tailwind.css)
+          echo "Built CSS: ${size} bytes"
+          test "$size" -gt 1024
+
+      - name: Upload built CSS artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tailwind-css
+          path: assets/css/tailwind.css
+          retention-days: 7
+
   html-validate:
     name: HTML Validation
     runs-on: ubuntu-latest
@@ -54,6 +87,7 @@ jobs:
   lighthouse:
     name: Lighthouse CI
     runs-on: ubuntu-latest
+    needs: build-css
     steps:
       - uses: actions/checkout@v6
 
@@ -61,6 +95,13 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Tailwind CSS
+        run: npm run build
 
       - name: Install http-server
         run: npm install -g http-server

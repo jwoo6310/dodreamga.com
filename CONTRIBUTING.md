@@ -12,15 +12,22 @@ Thanks for taking the time to contribute! This repo powers the DoDream Baptist C
 
 ## Local preview
 
-This site has no build step. Serve the root directory with any static server:
+Tailwind is now compiled via the Tailwind CLI, so the CSS needs to be built once before the site will render correctly:
 
 ```bash
-python3 -m http.server 8000
+# 1. Install dev dependencies (one-time)
+npm install
+
+# 2. Build the CSS (one-shot, or use `npm run dev` for watch mode)
+npm run build
+
+# 3. Serve the static files
+npm run serve                # http://localhost:8080
 # or
-npx serve .
+python3 -m http.server 8000  # http://localhost:8000
 ```
 
-Then visit `http://localhost:8000`.
+`assets/css/tailwind.css` is a build artifact — it's gitignored and is regenerated automatically on every Vercel deploy.
 
 ## Branch & commit workflow
 

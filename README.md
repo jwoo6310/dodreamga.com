@@ -32,14 +32,14 @@ The gallery is intentionally decoupled from the repo: adding photos is a drag-an
 
 ## Tech stack
 
-- **Markup & styling:** HTML5, [Tailwind CSS](https://tailwindcss.com/) (CDN)
+- **Markup & styling:** HTML5, [Tailwind CSS](https://tailwindcss.com/) v3 compiled via the Tailwind CLI (no runtime CDN)
 - **Icons:** [Feather Icons](https://feathericons.com/), [Font Awesome](https://fontawesome.com/)
 - **Visual effects:** [Vanta.js](https://www.vantajs.com/) (hero background)
 - **Interactive map:** custom SVG world map with per-country click states
 - **Photo gallery backend:** Google Apps Script + Google Drive
 - **Analytics:** Google Analytics 4 (gtag.js)
-- **Hosting:** [Vercel](https://vercel.com/) with custom domain
-- **CI/CD:** Vercel (auto-deploy on push) + GitHub Actions (Lighthouse CI, link check, HTML validation)
+- **Hosting:** [Vercel](https://vercel.com/) with custom domain — runs `npm run build` on every deploy
+- **CI/CD:** Vercel (auto-deploy on push) + GitHub Actions (CSS build, Lighthouse CI, link check, HTML validation)
 
 ## Repository structure
 
@@ -53,13 +53,19 @@ The gallery is intentionally decoupled from the repo: adding photos is a drag-an
 ├── smd344/                   # Discipleship & supported missionaries
 ├── archive/                  # Deprecated pages kept for reference
 ├── assets/
-│   ├── css/style.css         # Small custom overrides (Tailwind-first)
+│   ├── css/style.css         # Small custom overrides (loaded after Tailwind)
+│   ├── css/tailwind.css      # Built by `npm run build` — gitignored
 │   ├── js/script.js          # Nav, i18n, mobile menu, Vanta init
 │   ├── js/gallery.js         # Drive-backed album viewer
 │   ├── js/missionaries.js    # Interactive world map logic
 │   ├── img/                  # Logos, static imagery
 │   ├── vid/                  # Background video loops
 │   └── favicon/              # Multi-size favicons & webmanifest
+├── src/
+│   └── tailwind.css          # Tailwind input file (@tailwind directives)
+├── tailwind.config.js        # Brand palette, content globs
+├── package.json              # Tailwind CLI + build scripts
+├── vercel.json               # Vercel build command
 └── .github/                  # Workflows, issue & PR templates
 ```
 
@@ -75,21 +81,28 @@ Default language is Korean.
 
 ## Local development
 
-This project has no build step. To preview locally:
+The site needs Tailwind compiled once before it will render correctly.
 
 ```bash
-# Option 1: Python's built-in server
-python3 -m http.server 8000
+# 1. Install dev dependencies (Tailwind CLI)
+npm install
 
-# Option 2: Node's npx serve
-npx serve .
+# 2. Build the CSS once, or run in watch mode while editing
+npm run build       # one-shot, minified production build
+# or
+npm run dev         # watch mode — rebuilds on every change
+
+# 3. Serve the static files (any static server works)
+npm run serve                # http://localhost:8080
+# or
+python3 -m http.server 8000  # http://localhost:8000
 ```
 
-Then open `http://localhost:8000`.
+The built `assets/css/tailwind.css` is gitignored — it's a build artifact. Vercel rebuilds it on every deploy via the `buildCommand` in `vercel.json`.
 
 ## Deployment
 
-The site is hosted on [Vercel](https://vercel.com/), which auto-deploys every push to `main`. The custom domain `dodreamga.com` is configured through Vercel's dashboard. GitHub Actions runs quality checks (HTML validation, broken link detection, Lighthouse CI) on every push and PR, but deployment itself is handled entirely by Vercel.
+The site is hosted on [Vercel](https://vercel.com/), which auto-deploys every push to `main`. On each deploy, Vercel runs `npm install && npm run build` to compile Tailwind, then serves the repository root as static files. The custom domain `dodreamga.com` is configured through Vercel's dashboard. GitHub Actions runs quality checks (CSS build, HTML validation, broken link detection, Lighthouse CI) on every push and PR, but deployment itself is handled entirely by Vercel.
 
 ## Contributing
 
@@ -103,8 +116,12 @@ Tracked on the GitHub Project board. Highlights under consideration:
 - Sermon archive with embedded audio/video
 - Event RSVP flow
 - Weekly bulletin auto-publisher
-- Move Tailwind from CDN to a tiny build step for production optimization
-- Consolidate duplicate Tailwind loads on `index.html`
+- Componentize the duplicated nav/footer markup (currently copy-pasted across every page)
+
+Recently shipped:
+
+- Migrated Tailwind from runtime CDN to a Tailwind CLI build step (purged production CSS, brand palette in `tailwind.config.js`)
+- Removed the duplicate Tailwind v2 + Play CDN loads on every page
 
 ## License
 
