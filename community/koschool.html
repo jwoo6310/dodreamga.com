@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -28,7 +28,8 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="/assets/favicon/site.webmanifest" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link rel="stylesheet" href="/assets/css/tailwind.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://unpkg.com/feather-icons"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
@@ -143,7 +144,7 @@
                             <!-- Language Toggle -->
                             <li class="flex items-center">
                                 <button id="language-toggle" class="ml-2 px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">
-                                한글/ENG
+                                í•œê¸€/ENG
                                 </button>
                             </li>
                             </ul>
@@ -163,7 +164,7 @@
                 <img src="../assets/img/logo.png" alt="DoDream Church Logo" class="h-10 w-auto">
                 </a>
                 <div class="flex items-center space-x-2">
-                    <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">한글/ENG</button>
+                    <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">í•œê¸€/ENG</button>
                     <button id="mobile-menu-toggle" class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none">
                     <i data-feather="menu"></i>
                     </button>        
@@ -247,7 +248,7 @@
         <div class="bg-gray-100">
             <main class="pt-24 pb-0 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
                 <div class="text-center mb-12 pt-12">
-                    <h2 id="ko-title" class="text-3xl font-bold text-primary mb-4">한국 학교</h2>
+                    <h2 id="ko-title" class="text-3xl font-bold text-primary mb-4">í•œêµ­ í•™êµ</h2>
                     <div class="w-24 h-1 bg-brand-700 mx-auto"></div>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-12">
@@ -355,66 +356,66 @@
         <script>
             const elementsToTranslate = {
                 // PC Nav
-                'nav-home':     { en: 'Home',         ko: '홈' },
-                'nav-about':    { en: 'About',        ko: '교회 소개' },
-                    'about-greeting': { en: 'Greeting',        ko: '인사말' },
-                    'about-vision':   { en: 'Vision', ko: '교회 비전' },
-                    'about-worship':  { en: 'Worship Schedule', ko: '예배시간 안내' },
-                    'about-location': { en: 'Directions', ko: '오시는 길' },
-                'nav-community':{ en: 'Our Community',  ko: '교회 구성' },
-                    'community-pos':     { en: 'POS Groups',     ko: 'POS 모임' },
-                    'community-school':  { en: 'Korean School',  ko: '한국 학교' },
-                    'community-dept':    { en: 'Departments',    ko: '부서' },
-                'nav-events':   { en: 'Events',       ko: '행사 및 모임' },
-                    'events-regular':    { en: 'Regular Meetings', ko: '정기모임' },
-                    'events-academy':    { en: 'Academy',         ko: '아카데미' },
-                    'events-special':    { en: 'Special Events',   ko: '특별행사' },
-                'nav-nextgen':  { en: 'Next Gen',     ko: '다음 세대' },
-                    'nextgen-ministries':        { en: 'Ministries',    ko: '세대 사역' },
-                    'nextgen-gallery':   { en: 'Gallery',          ko: '사진첩' },
-                'nav-smd':      { en: 'SMD344',       ko: 'SMD344 선교단' },
-                    'smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
-                    'smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },  
+                'nav-home':     { en: 'Home',         ko: 'í™ˆ' },
+                'nav-about':    { en: 'About',        ko: 'êµíšŒ ì†Œê°œ' },
+                    'about-greeting': { en: 'Greeting',        ko: 'ì¸ì‚¬ë§' },
+                    'about-vision':   { en: 'Vision', ko: 'êµíšŒ ë¹„ì „' },
+                    'about-worship':  { en: 'Worship Schedule', ko: 'ì˜ˆë°°ì‹œê°„ ì•ˆë‚´' },
+                    'about-location': { en: 'Directions', ko: 'ì˜¤ì‹œëŠ” ê¸¸' },
+                'nav-community':{ en: 'Our Community',  ko: 'êµíšŒ êµ¬ì„±' },
+                    'community-pos':     { en: 'POS Groups',     ko: 'POS ëª¨ìž„' },
+                    'community-school':  { en: 'Korean School',  ko: 'í•œêµ­ í•™êµ' },
+                    'community-dept':    { en: 'Departments',    ko: 'ë¶€ì„œ' },
+                'nav-events':   { en: 'Events',       ko: 'í–‰ì‚¬ ë° ëª¨ìž„' },
+                    'events-regular':    { en: 'Regular Meetings', ko: 'ì •ê¸°ëª¨ìž„' },
+                    'events-academy':    { en: 'Academy',         ko: 'ì•„ì¹´ë°ë¯¸' },
+                    'events-special':    { en: 'Special Events',   ko: 'íŠ¹ë³„í–‰ì‚¬' },
+                'nav-nextgen':  { en: 'Next Gen',     ko: 'ë‹¤ìŒ ì„¸ëŒ€' },
+                    'nextgen-ministries':        { en: 'Ministries',    ko: 'ì„¸ëŒ€ ì‚¬ì—­' },
+                    'nextgen-gallery':   { en: 'Gallery',          ko: 'ì‚¬ì§„ì²©' },
+                'nav-smd':      { en: 'SMD344',       ko: 'SMD344 ì„ êµë‹¨' },
+                    'smd-missionary':    { en: 'Missionaries',     ko: 'í›„ì› ì„ êµì‚¬' },
+                    'smd-discipleship':  { en: 'Discipleship',     ko: 'ì œìž í›ˆë ¨' },  
                 // Mobile Nav
-                'm-home':    { en: 'Home',        ko: '홈' },
-                'm-about':   { en: 'About',        ko: '교회 소개' },
-                    'm-about-greeting': { en: 'Greeting',        ko: '인사말' },
-                    'm-about-vision':   { en: 'Vision', ko: '교회 비전' },
-                    'm-about-worship':  { en: 'Worship Schedule', ko: '예배시간 안내' },
-                    'm-about-location': { en: 'Directions', ko: '오시는 길' },
-                'm-community': { en: 'Our Community',  ko: '교회 구성' },
-                    'm-community-pos':     { en: 'POS Groups',     ko: 'POS 모임' },
-                    'm-community-school':  { en: 'Korean School',  ko: '한국 학교' },
-                    'm-community-dept':    { en: 'Departments',    ko: '부서' },
-                'm-events':    { en: 'Events',       ko: '행사 및 모임' },
-                    'm-events-regular':    { en: 'Regular Meetings', ko: '정기모임' },
-                    'm-events-academy':    { en: 'Academy',         ko: '아카데미' },
-                    'm-events-special':    { en: 'Special Events',   ko: '특별행사' },
-                'm-nextgen':  { en: 'Next Gen',     ko: '다음 세대' },
-                    'm-nextgen-ministries':        { en: 'Ministries',    ko: '세대 사역' },
-                    'm-nextgen-gallery':   { en: 'Gallery',          ko: '사진첩' },
-                'm-smd': { en: 'SMD344',       ko: 'SMD344 선교단' },
-                    'm-smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
-                    'm-smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },
+                'm-home':    { en: 'Home',        ko: 'í™ˆ' },
+                'm-about':   { en: 'About',        ko: 'êµíšŒ ì†Œê°œ' },
+                    'm-about-greeting': { en: 'Greeting',        ko: 'ì¸ì‚¬ë§' },
+                    'm-about-vision':   { en: 'Vision', ko: 'êµíšŒ ë¹„ì „' },
+                    'm-about-worship':  { en: 'Worship Schedule', ko: 'ì˜ˆë°°ì‹œê°„ ì•ˆë‚´' },
+                    'm-about-location': { en: 'Directions', ko: 'ì˜¤ì‹œëŠ” ê¸¸' },
+                'm-community': { en: 'Our Community',  ko: 'êµíšŒ êµ¬ì„±' },
+                    'm-community-pos':     { en: 'POS Groups',     ko: 'POS ëª¨ìž„' },
+                    'm-community-school':  { en: 'Korean School',  ko: 'í•œêµ­ í•™êµ' },
+                    'm-community-dept':    { en: 'Departments',    ko: 'ë¶€ì„œ' },
+                'm-events':    { en: 'Events',       ko: 'í–‰ì‚¬ ë° ëª¨ìž„' },
+                    'm-events-regular':    { en: 'Regular Meetings', ko: 'ì •ê¸°ëª¨ìž„' },
+                    'm-events-academy':    { en: 'Academy',         ko: 'ì•„ì¹´ë°ë¯¸' },
+                    'm-events-special':    { en: 'Special Events',   ko: 'íŠ¹ë³„í–‰ì‚¬' },
+                'm-nextgen':  { en: 'Next Gen',     ko: 'ë‹¤ìŒ ì„¸ëŒ€' },
+                    'm-nextgen-ministries':        { en: 'Ministries',    ko: 'ì„¸ëŒ€ ì‚¬ì—­' },
+                    'm-nextgen-gallery':   { en: 'Gallery',          ko: 'ì‚¬ì§„ì²©' },
+                'm-smd': { en: 'SMD344',       ko: 'SMD344 ì„ êµë‹¨' },
+                    'm-smd-missionary':    { en: 'Missionaries',     ko: 'í›„ì› ì„ êµì‚¬' },
+                    'm-smd-discipleship':  { en: 'Discipleship',     ko: 'ì œìž í›ˆë ¨' },
                 // Korean School
-                'ko-title': { en: "Korean School", ko: '한국 학교' },
-                'ko-1-title': { en: "About Our School", ko: '학교 소개' },
-                'ko-1-sub-1': { en: '<strong>Established:</strong> September 2009', ko:'<strong>설립:</strong> 2009년 9월'},
-                'ko-1-sub-2': { en: '<strong>Affiliation:</strong> National Association of Korean Schools (NAKS) and Southeast Korean School Association', ko: '<strong>소속:</strong> 재미한국학교협의회(NAKS), 남동부한국학교협의회' },
+                'ko-title': { en: "Korean School", ko: 'í•œêµ­ í•™êµ' },
+                'ko-1-title': { en: "About Our School", ko: 'í•™êµ ì†Œê°œ' },
+                'ko-1-sub-1': { en: '<strong>Established:</strong> September 2009', ko:'<strong>ì„¤ë¦½:</strong> 2009ë…„ 9ì›”'},
+                'ko-1-sub-2': { en: '<strong>Affiliation:</strong> National Association of Korean Schools (NAKS) and Southeast Korean School Association', ko: '<strong>ì†Œì†:</strong> ìž¬ë¯¸í•œêµ­í•™êµí˜‘ì˜íšŒ(NAKS), ë‚¨ë™ë¶€í•œêµ­í•™êµí˜‘ì˜íšŒ' },
                 'ko-1-sub-3': { en: 'We provide Korean language and cultural arts education for children in bilingual living environments, helping them develop creative and flexible thinking through collaboration between teachers, students, parents, and associations.', 
-                                ko: '우리 학교는 이중언어 환경의 아이들을 위해 한국어와 문화·예술 교육을 제공하며, 교사·학생·학부모·협회의 협력을 통해 창의적이고 유연한 사고를 기르도록 돕습니다.' },
-                'ko-1-sub-4': { en: 'We offer various Korean cultural experiences and events such as traditional market days to introduce Korea to our students.', ko: '또한 전통 장터 체험날 등 다양한 한국 문화 활동과 행사를 통해 학생들에게 한국을 소개합니다.' },
-                'ko-2-title': { en: "Our Mission", ko: '우리의 사명' },
-                'ko-2-sub-1': { en: "Language Education", ko: '언어 교육' },
-                'ko-2-sub-2': { en: "Comprehensive Korean language instruction tailored for bilingual children", ko: '이중언어 아동을 위한 체계적이고 종합적인 한국어 교육을 제공합니다.' },
-                'ko-2-sub-3': { en: "Cultural Immersion", ko: '문화 체험' },
-                'ko-2-sub-4': { en: "Authentic Korean cultural experiences and traditions", ko: '진정성 있는 한국 문화 경험과 전통을 배우고 체득합니다.' },
-                'ko-2-sub-5': { en: "Community Building", ko: '공동체 형성' },
-                'ko-2-sub-6': { en: "Fostering connections between students, families, and educators", ko: '학생·가정·교사 간의 연결과 협력을 촉진하여 건강한 배움의 공동체를 만들어 갑니다.' },
+                                ko: 'ìš°ë¦¬ í•™êµëŠ” ì´ì¤‘ì–¸ì–´ í™˜ê²½ì˜ ì•„ì´ë“¤ì„ ìœ„í•´ í•œêµ­ì–´ì™€ ë¬¸í™”Â·ì˜ˆìˆ  êµìœ¡ì„ ì œê³µí•˜ë©°, êµì‚¬Â·í•™ìƒÂ·í•™ë¶€ëª¨Â·í˜‘íšŒì˜ í˜‘ë ¥ì„ í†µí•´ ì°½ì˜ì ì´ê³  ìœ ì—°í•œ ì‚¬ê³ ë¥¼ ê¸°ë¥´ë„ë¡ ë•ìŠµë‹ˆë‹¤.' },
+                'ko-1-sub-4': { en: 'We offer various Korean cultural experiences and events such as traditional market days to introduce Korea to our students.', ko: 'ë˜í•œ ì „í†µ ìž¥í„° ì²´í—˜ë‚  ë“± ë‹¤ì–‘í•œ í•œêµ­ ë¬¸í™” í™œë™ê³¼ í–‰ì‚¬ë¥¼ í†µí•´ í•™ìƒë“¤ì—ê²Œ í•œêµ­ì„ ì†Œê°œí•©ë‹ˆë‹¤.' },
+                'ko-2-title': { en: "Our Mission", ko: 'ìš°ë¦¬ì˜ ì‚¬ëª…' },
+                'ko-2-sub-1': { en: "Language Education", ko: 'ì–¸ì–´ êµìœ¡' },
+                'ko-2-sub-2': { en: "Comprehensive Korean language instruction tailored for bilingual children", ko: 'ì´ì¤‘ì–¸ì–´ ì•„ë™ì„ ìœ„í•œ ì²´ê³„ì ì´ê³  ì¢…í•©ì ì¸ í•œêµ­ì–´ êµìœ¡ì„ ì œê³µí•©ë‹ˆë‹¤.' },
+                'ko-2-sub-3': { en: "Cultural Immersion", ko: 'ë¬¸í™” ì²´í—˜' },
+                'ko-2-sub-4': { en: "Authentic Korean cultural experiences and traditions", ko: 'ì§„ì •ì„± ìžˆëŠ” í•œêµ­ ë¬¸í™” ê²½í—˜ê³¼ ì „í†µì„ ë°°ìš°ê³  ì²´ë“í•©ë‹ˆë‹¤.' },
+                'ko-2-sub-5': { en: "Community Building", ko: 'ê³µë™ì²´ í˜•ì„±' },
+                'ko-2-sub-6': { en: "Fostering connections between students, families, and educators", ko: 'í•™ìƒÂ·ê°€ì •Â·êµì‚¬ ê°„ì˜ ì—°ê²°ê³¼ í˜‘ë ¥ì„ ì´‰ì§„í•˜ì—¬ ê±´ê°•í•œ ë°°ì›€ì˜ ê³µë™ì²´ë¥¼ ë§Œë“¤ì–´ ê°‘ë‹ˆë‹¤.' },
             
                 // Donation
-                'donation-title': { en: 'Giving & Support', ko: '헌금과 후원' },
-                'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: '여러분의 소중한 헌금과 헌물은 교회와 선교지를 위해 귀하게 쓰입니다.' }
+                'donation-title': { en: 'Giving & Support', ko: 'í—Œê¸ˆê³¼ í›„ì›' },
+                'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: 'ì—¬ëŸ¬ë¶„ì˜ ì†Œì¤‘í•œ í—Œê¸ˆê³¼ í—Œë¬¼ì€ êµíšŒì™€ ì„ êµì§€ë¥¼ ìœ„í•´ ê·€í•˜ê²Œ ì“°ìž…ë‹ˆë‹¤.' }
             };
             function updateLang(lang='en') {
             Object.entries(i18n).forEach(([id, t]) => {

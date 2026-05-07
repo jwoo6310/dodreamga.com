@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -28,7 +28,8 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="/assets/favicon/site.webmanifest" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link rel="stylesheet" href="/assets/css/tailwind.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://unpkg.com/feather-icons"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
@@ -143,7 +144,7 @@
                             <!-- Language Toggle -->
                             <li class="flex items-center">
                                 <button id="language-toggle" class="ml-2 px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">
-                                한글/ENG
+                                í•œê¸€/ENG
                                 </button>
                             </li>
                             </ul>
@@ -163,7 +164,7 @@
                 <img src="../assets/img/logo.png" alt="DoDream Church Logo" class="h-10 w-auto">
                 </a>
                 <div class="flex items-center space-x-2">
-                    <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">한글/ENG</button>
+                    <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">í•œê¸€/ENG</button>
                     <button id="mobile-menu-toggle" class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none">
                     <i data-feather="menu"></i>
                     </button>        
@@ -247,37 +248,37 @@
         <div class="bg-gray-100">
             <main class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
                 <div class="text-center mb-12 pt-12">
-                    <h2 id="gallery-title" class="text-3xl font-bold text-primary mb-4">사진첩</h2>
+                    <h2 id="gallery-title" class="text-3xl font-bold text-primary mb-4">ì‚¬ì§„ì²©</h2>
                     <div class="w-24 h-1 bg-brand-700 mx-auto"></div>
                 </div>
-                <!-- 앨범 카드가 들어갈 그리드 -->
+                <!-- ì•¨ë²” ì¹´ë“œê°€ ë“¤ì–´ê°ˆ ê·¸ë¦¬ë“œ -->
                 <div id="album-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             </main>
         </div>
-        <!-- 앨범 모달 -->
+        <!-- ì•¨ë²” ëª¨ë‹¬ -->
         <div id="album-modal" class="fixed inset-0 bg-black/70 hidden z-50">
             <div class="absolute inset-0" id="album-overlay"></div>
             <div class="relative max-w-6xl mx-auto my-10 bg-white rounded-xl shadow-2xl overflow-hidden">
-                <!-- 헤더 -->
+                <!-- í—¤ë” -->
                 <div class="flex items-center justify-between px-4 sm:px-6 py-3 border-b">
                     <h3 id="album-modal-title" class="text-xl font-semibold text-gray-900">Album</h3>
                     <button id="album-modal-close" class="p-2 rounded hover:bg-gray-100" aria-label="Close">
-                    ✕
+                    âœ•
                     </button>
                 </div>
-                <!-- 큰 이미지 + 좌우 버튼 -->
+                <!-- í° ì´ë¯¸ì§€ + ì¢Œìš° ë²„íŠ¼ -->
                 <div class="relative bg-black">
                     <img id="album-hero" src="data:," alt="Gallery image" class="mx-auto bg-white max-h-[70vh] object-contain w-full select-none" />
                     <button id="album-prev"
                         class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full px-3 py-2 shadow">
-                    ‹
+                    â€¹
                     </button>
                     <button id="album-next"
                         class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full px-3 py-2 shadow">
-                    ›
+                    â€º
                     </button>
                 </div>
-                <!-- 썸네일 스트립 -->
+                <!-- ì¸ë„¤ì¼ ìŠ¤íŠ¸ë¦½ -->
                 <div class="px-3 sm:px-4 py-3 border-t">
                     <div id="album-thumbs" class="flex gap-2 overflow-x-auto"></div>
                 </div>
@@ -347,56 +348,56 @@
         <script>
             const elementsToTranslate = {
                 // PC Nav
-                'nav-home':     { en: 'Home',         ko: '홈' },
-                'nav-about':    { en: 'About',        ko: '교회 소개' },
-                    'about-greeting': { en: 'Greeting',        ko: '인사말' },
-                    'about-vision':   { en: 'Vision', ko: '교회 비전' },
-                    'about-worship':  { en: 'Worship Schedule', ko: '예배시간 안내' },
-                    'about-location': { en: 'Directions', ko: '오시는 길' },
-                'nav-community':{ en: 'Our Community',  ko: '교회 구성' },
-                    'community-pos':     { en: 'POS Groups',     ko: 'POS 모임' },
-                    'community-school':  { en: 'Korean School',  ko: '한국 학교' },
-                    'community-dept':    { en: 'Departments',    ko: '부서' },
-                'nav-events':   { en: 'Events',       ko: '행사 및 모임' },
-                    'events-regular':    { en: 'Regular Meetings', ko: '정기모임' },
-                    'events-academy':    { en: 'Academy',         ko: '아카데미' },
-                    'events-special':    { en: 'Special Events',   ko: '특별행사' },
-                'nav-nextgen':  { en: 'Next Gen',     ko: '다음 세대' },
-                    'nextgen-ministries':        { en: 'Ministries',    ko: '세대 사역' },
-                    'nextgen-gallery':   { en: 'Gallery',          ko: '사진첩' },
-                'nav-smd':      { en: 'SMD344',       ko: 'SMD344 선교단' },
-                    'smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
-                    'smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },  
+                'nav-home':     { en: 'Home',         ko: 'í™ˆ' },
+                'nav-about':    { en: 'About',        ko: 'êµíšŒ ì†Œê°œ' },
+                    'about-greeting': { en: 'Greeting',        ko: 'ì¸ì‚¬ë§' },
+                    'about-vision':   { en: 'Vision', ko: 'êµíšŒ ë¹„ì „' },
+                    'about-worship':  { en: 'Worship Schedule', ko: 'ì˜ˆë°°ì‹œê°„ ì•ˆë‚´' },
+                    'about-location': { en: 'Directions', ko: 'ì˜¤ì‹œëŠ” ê¸¸' },
+                'nav-community':{ en: 'Our Community',  ko: 'êµíšŒ êµ¬ì„±' },
+                    'community-pos':     { en: 'POS Groups',     ko: 'POS ëª¨ìž„' },
+                    'community-school':  { en: 'Korean School',  ko: 'í•œêµ­ í•™êµ' },
+                    'community-dept':    { en: 'Departments',    ko: 'ë¶€ì„œ' },
+                'nav-events':   { en: 'Events',       ko: 'í–‰ì‚¬ ë° ëª¨ìž„' },
+                    'events-regular':    { en: 'Regular Meetings', ko: 'ì •ê¸°ëª¨ìž„' },
+                    'events-academy':    { en: 'Academy',         ko: 'ì•„ì¹´ë°ë¯¸' },
+                    'events-special':    { en: 'Special Events',   ko: 'íŠ¹ë³„í–‰ì‚¬' },
+                'nav-nextgen':  { en: 'Next Gen',     ko: 'ë‹¤ìŒ ì„¸ëŒ€' },
+                    'nextgen-ministries':        { en: 'Ministries',    ko: 'ì„¸ëŒ€ ì‚¬ì—­' },
+                    'nextgen-gallery':   { en: 'Gallery',          ko: 'ì‚¬ì§„ì²©' },
+                'nav-smd':      { en: 'SMD344',       ko: 'SMD344 ì„ êµë‹¨' },
+                    'smd-missionary':    { en: 'Missionaries',     ko: 'í›„ì› ì„ êµì‚¬' },
+                    'smd-discipleship':  { en: 'Discipleship',     ko: 'ì œìž í›ˆë ¨' },  
                 // Mobile Nav
-                'm-home':    { en: 'Home',        ko: '홈' },
-                'm-about':   { en: 'About',        ko: '교회 소개' },
-                    'm-about-greeting': { en: 'Greeting',        ko: '인사말' },
-                    'm-about-vision':   { en: 'Vision', ko: '교회 비전' },
-                    'm-about-worship':  { en: 'Worship Schedule', ko: '예배시간 안내' },
-                    'm-about-location': { en: 'Directions', ko: '오시는 길' },
-                'm-community': { en: 'Our Community',  ko: '교회 구성' },
-                    'm-community-pos':     { en: 'POS Groups',     ko: 'POS 모임' },
-                    'm-community-school':  { en: 'Korean School',  ko: '한국 학교' },
-                    'm-community-dept':    { en: 'Departments',    ko: '부서' },
-                'm-events':    { en: 'Events',       ko: '행사 및 모임' },
-                    'm-events-regular':    { en: 'Regular Meetings', ko: '정기모임' },
-                    'm-events-academy':    { en: 'Academy',         ko: '아카데미' },
-                    'm-events-special':    { en: 'Special Events',   ko: '특별행사' },
-                'm-nextgen':  { en: 'Next Gen',     ko: '다음 세대' },
-                    'm-nextgen-ministries':        { en: 'Ministries',    ko: '세대 사역' },
-                    'm-nextgen-gallery':   { en: 'Gallery',          ko: '사진첩' },
-                'm-smd': { en: 'SMD344',       ko: 'SMD344 선교단' },
-                    'm-smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
-                    'm-smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },
+                'm-home':    { en: 'Home',        ko: 'í™ˆ' },
+                'm-about':   { en: 'About',        ko: 'êµíšŒ ì†Œê°œ' },
+                    'm-about-greeting': { en: 'Greeting',        ko: 'ì¸ì‚¬ë§' },
+                    'm-about-vision':   { en: 'Vision', ko: 'êµíšŒ ë¹„ì „' },
+                    'm-about-worship':  { en: 'Worship Schedule', ko: 'ì˜ˆë°°ì‹œê°„ ì•ˆë‚´' },
+                    'm-about-location': { en: 'Directions', ko: 'ì˜¤ì‹œëŠ” ê¸¸' },
+                'm-community': { en: 'Our Community',  ko: 'êµíšŒ êµ¬ì„±' },
+                    'm-community-pos':     { en: 'POS Groups',     ko: 'POS ëª¨ìž„' },
+                    'm-community-school':  { en: 'Korean School',  ko: 'í•œêµ­ í•™êµ' },
+                    'm-community-dept':    { en: 'Departments',    ko: 'ë¶€ì„œ' },
+                'm-events':    { en: 'Events',       ko: 'í–‰ì‚¬ ë° ëª¨ìž„' },
+                    'm-events-regular':    { en: 'Regular Meetings', ko: 'ì •ê¸°ëª¨ìž„' },
+                    'm-events-academy':    { en: 'Academy',         ko: 'ì•„ì¹´ë°ë¯¸' },
+                    'm-events-special':    { en: 'Special Events',   ko: 'íŠ¹ë³„í–‰ì‚¬' },
+                'm-nextgen':  { en: 'Next Gen',     ko: 'ë‹¤ìŒ ì„¸ëŒ€' },
+                    'm-nextgen-ministries':        { en: 'Ministries',    ko: 'ì„¸ëŒ€ ì‚¬ì—­' },
+                    'm-nextgen-gallery':   { en: 'Gallery',          ko: 'ì‚¬ì§„ì²©' },
+                'm-smd': { en: 'SMD344',       ko: 'SMD344 ì„ êµë‹¨' },
+                    'm-smd-missionary':    { en: 'Missionaries',     ko: 'í›„ì› ì„ êµì‚¬' },
+                    'm-smd-discipleship':  { en: 'Discipleship',     ko: 'ì œìž í›ˆë ¨' },
                 // Special Events
                 "gallery-title": {
                     "en": "Gallery",
-                    "ko": "사진첩"
+                    "ko": "ì‚¬ì§„ì²©"
                 },
             
                 // Donation
-                'donation-title': { en: 'Giving & Support', ko: '헌금과 후원' },
-                'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: '여러분의 소중한 헌금과 헌물은 교회와 선교지를 위해 귀하게 쓰입니다.' }
+                'donation-title': { en: 'Giving & Support', ko: 'í—Œê¸ˆê³¼ í›„ì›' },
+                'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: 'ì—¬ëŸ¬ë¶„ì˜ ì†Œì¤‘í•œ í—Œê¸ˆê³¼ í—Œë¬¼ì€ êµíšŒì™€ ì„ êµì§€ë¥¼ ìœ„í•´ ê·€í•˜ê²Œ ì“°ìž…ë‹ˆë‹¤.' }
             };
         </script>
         <script src="../assets/js/script.js"></script>

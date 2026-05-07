@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -28,7 +28,8 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="/assets/favicon/site.webmanifest" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link rel="stylesheet" href="/assets/css/tailwind.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://unpkg.com/feather-icons"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
@@ -143,7 +144,7 @@
                             <!-- Language Toggle -->
                             <li class="flex items-center">
                                 <button id="language-toggle" class="ml-2 px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">
-                                한글/ENG
+                                í•œê¸€/ENG
                                 </button>
                             </li>
                             </ul>
@@ -163,7 +164,7 @@
                 <img src="../assets/img/logo.png" alt="DoDream Church Logo" class="h-10 w-auto">
                 </a>
                 <div class="flex items-center space-x-2">
-                    <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">한글/ENG</button>
+                    <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">í•œê¸€/ENG</button>
                     <button id="mobile-menu-toggle" class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none">
                     <i data-feather="menu"></i>
                     </button>        
@@ -247,61 +248,61 @@
         <div class="bg-gray-100">
         <main class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
             <div class="text-center mb-12 pt-12">
-                <h2 id="special-title" class="text-3xl font-bold text-primary mb-4">특별 행사</h2>
+                <h2 id="special-title" class="text-3xl font-bold text-primary mb-4">íŠ¹ë³„ í–‰ì‚¬</h2>
                 <div class="w-24 h-1 bg-brand-700 mx-auto"></div>
             </div>
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- New Year Home Visits -->
                 <div class="bg-white p-6 rounded-lg transition-transform hover:scale-105">
-                    <h4 id="homevisit-title" class="text-xl font-medium text-secondary mb-4">신년 대심방</h4>
+                    <h4 id="homevisit-title" class="text-xl font-medium text-secondary mb-4">ì‹ ë…„ ëŒ€ì‹¬ë°©</h4>
                     <p id="homevisit-body" class="text-slate-700 leading-relaxed mb-4">
-                        매년 <span class="font-semibold">1월</span>, 신청 가정을 대상으로 신년 대심방을 진행합니다.
-                        새해를 <span class="font-semibold">가정 예배</span>로 시작하며, 한 해의 계획과 기도제목을 함께 나누고 축복합니다.
+                        ë§¤ë…„ <span class="font-semibold">1ì›”</span>, ì‹ ì²­ ê°€ì •ì„ ëŒ€ìƒìœ¼ë¡œ ì‹ ë…„ ëŒ€ì‹¬ë°©ì„ ì§„í–‰í•©ë‹ˆë‹¤.
+                        ìƒˆí•´ë¥¼ <span class="font-semibold">ê°€ì • ì˜ˆë°°</span>ë¡œ ì‹œìž‘í•˜ë©°, í•œ í•´ì˜ ê³„íšê³¼ ê¸°ë„ì œëª©ì„ í•¨ê»˜ ë‚˜ëˆ„ê³  ì¶•ë³µí•©ë‹ˆë‹¤.
                     </p>
                     <ul class="space-y-2 text-slate-700">
                         <li class="flex items-start">
                             <i data-feather="home" class="text-brand-500 mr-2"></i>
-                            <span id="homevisit-1">가정별 심방(사전 신청제)</span>
+                            <span id="homevisit-1">ê°€ì •ë³„ ì‹¬ë°©(ì‚¬ì „ ì‹ ì²­ì œ)</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="calendar" class="text-brand-500 mr-2"></i>
-                            <span id="homevisit-2">진행 시기: 매년 1월</span>
+                            <span id="homevisit-2">ì§„í–‰ ì‹œê¸°: ë§¤ë…„ 1ì›”</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="bookmark" class="text-brand-500 mr-2"></i>
-                            <span id="homevisit-3">말씀 나눔 · 기도 · 축복</span>
+                            <span id="homevisit-3">ë§ì”€ ë‚˜ëˆ” Â· ê¸°ë„ Â· ì¶•ë³µ</span>
                         </li>
                     </ul>
                 </div>
                 <!-- New Year Retreat -->
                 <div class="bg-white p-6 rounded-lg transition-transform hover:scale-105">
-                    <h4 id="retreat-title" class="text-xl font-medium text-secondary mb-4">신년 수련회</h4>
+                    <h4 id="retreat-title" class="text-xl font-medium text-secondary mb-4">ì‹ ë…„ ìˆ˜ë ¨íšŒ</h4>
                     <p id="retreat-body" class="text-slate-700 leading-relaxed mb-4">
-                        매년 <span class="font-semibold">2월</span> 온 교회가 함께하는 신년 수련회를 통해
-                        1년 사역을 계획하고 하나님의 인도하심을 구합니다. 교회 또는 외부 장소에서 진행되며,
-                        주요 예배와 말씀, 기도회가 중심이 됩니다.
+                        ë§¤ë…„ <span class="font-semibold">2ì›”</span> ì˜¨ êµíšŒê°€ í•¨ê»˜í•˜ëŠ” ì‹ ë…„ ìˆ˜ë ¨íšŒë¥¼ í†µí•´
+                        1ë…„ ì‚¬ì—­ì„ ê³„íší•˜ê³  í•˜ë‚˜ë‹˜ì˜ ì¸ë„í•˜ì‹¬ì„ êµ¬í•©ë‹ˆë‹¤. êµíšŒ ë˜ëŠ” ì™¸ë¶€ ìž¥ì†Œì—ì„œ ì§„í–‰ë˜ë©°,
+                        ì£¼ìš” ì˜ˆë°°ì™€ ë§ì”€, ê¸°ë„íšŒê°€ ì¤‘ì‹¬ì´ ë©ë‹ˆë‹¤.
                     </p>
                     <ul class="space-y-2 text-slate-700">
                         <li class="flex items-start">
                             <i data-feather="map-pin" class="text-brand-500 mr-2"></i>
-                            <span id="retreat-1">장소: 교회 또는 수련 장소</span>
+                            <span id="retreat-1">ìž¥ì†Œ: êµíšŒ ë˜ëŠ” ìˆ˜ë ¨ ìž¥ì†Œ</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="users" class="text-brand-500 mr-2"></i>
-                            <span id="retreat-2">전교인 참여(부서 연합)</span>
+                            <span id="retreat-2">ì „êµì¸ ì°¸ì—¬(ë¶€ì„œ ì—°í•©)</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="book-open" class="text-brand-500 mr-2"></i>
-                            <span id="retreat-3">말씀/기도/비전 나눔 프로그램 운영</span>
+                            <span id="retreat-3">ë§ì”€/ê¸°ë„/ë¹„ì „ ë‚˜ëˆ” í”„ë¡œê·¸ëž¨ ìš´ì˜</span>
                         </li>
                     </ul>
                     <div class="bg-white rounded-md p-4 mt-5 border border-slate-200">
                         <h5 id="retreat-programs-title" class="text-base font-semibold text-primary mb-2">
-                            Sunday School &amp; Youth 프로그램
+                            Sunday School &amp; Youth í”„ë¡œê·¸ëž¨
                         </h5>
                         <p id="retreat-programs-body" class="text-slate-700 text-sm leading-relaxed">
-                            같은 기간 <span class="font-semibold">Sunday School</span>과 <span class="font-semibold">Youth</span>도
-                            연령별 맞춤 프로그램(예배, 소그룹, 활동)을 별도로 진행합니다.
+                            ê°™ì€ ê¸°ê°„ <span class="font-semibold">Sunday School</span>ê³¼ <span class="font-semibold">Youth</span>ë„
+                            ì—°ë ¹ë³„ ë§žì¶¤ í”„ë¡œê·¸ëž¨(ì˜ˆë°°, ì†Œê·¸ë£¹, í™œë™)ì„ ë³„ë„ë¡œ ì§„í–‰í•©ë‹ˆë‹¤.
                         </p>
                     </div>
                 </div>
@@ -372,83 +373,83 @@
         <script>
             const elementsToTranslate = {
                 // PC Nav
-                'nav-home':     { en: 'Home',         ko: '홈' },
-                'nav-about':    { en: 'About',        ko: '교회 소개' },
-                    'about-greeting': { en: 'Greeting',        ko: '인사말' },
-                    'about-vision':   { en: 'Vision', ko: '교회 비전' },
-                    'about-worship':  { en: 'Worship Schedule', ko: '예배시간 안내' },
-                    'about-location': { en: 'Directions', ko: '오시는 길' },
-                'nav-community':{ en: 'Our Community',  ko: '교회 구성' },
-                    'community-pos':     { en: 'POS Groups',     ko: 'POS 모임' },
-                    'community-school':  { en: 'Korean School',  ko: '한국 학교' },
-                    'community-dept':    { en: 'Departments',    ko: '부서' },
-                'nav-events':   { en: 'Events',       ko: '행사 및 모임' },
-                    'events-regular':    { en: 'Regular Meetings', ko: '정기모임' },
-                    'events-academy':    { en: 'Academy',         ko: '아카데미' },
-                    'events-special':    { en: 'Special Events',   ko: '특별행사' },
-                'nav-nextgen':  { en: 'Next Gen',     ko: '다음 세대' },
-                    'nextgen-ministries':        { en: 'Ministries',    ko: '세대 사역' },
-                    'nextgen-gallery':   { en: 'Gallery',          ko: '사진첩' },
-                'nav-smd':      { en: 'SMD344',       ko: 'SMD344 선교단' },
-                    'smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
-                    'smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },  
+                'nav-home':     { en: 'Home',         ko: 'í™ˆ' },
+                'nav-about':    { en: 'About',        ko: 'êµíšŒ ì†Œê°œ' },
+                    'about-greeting': { en: 'Greeting',        ko: 'ì¸ì‚¬ë§' },
+                    'about-vision':   { en: 'Vision', ko: 'êµíšŒ ë¹„ì „' },
+                    'about-worship':  { en: 'Worship Schedule', ko: 'ì˜ˆë°°ì‹œê°„ ì•ˆë‚´' },
+                    'about-location': { en: 'Directions', ko: 'ì˜¤ì‹œëŠ” ê¸¸' },
+                'nav-community':{ en: 'Our Community',  ko: 'êµíšŒ êµ¬ì„±' },
+                    'community-pos':     { en: 'POS Groups',     ko: 'POS ëª¨ìž„' },
+                    'community-school':  { en: 'Korean School',  ko: 'í•œêµ­ í•™êµ' },
+                    'community-dept':    { en: 'Departments',    ko: 'ë¶€ì„œ' },
+                'nav-events':   { en: 'Events',       ko: 'í–‰ì‚¬ ë° ëª¨ìž„' },
+                    'events-regular':    { en: 'Regular Meetings', ko: 'ì •ê¸°ëª¨ìž„' },
+                    'events-academy':    { en: 'Academy',         ko: 'ì•„ì¹´ë°ë¯¸' },
+                    'events-special':    { en: 'Special Events',   ko: 'íŠ¹ë³„í–‰ì‚¬' },
+                'nav-nextgen':  { en: 'Next Gen',     ko: 'ë‹¤ìŒ ì„¸ëŒ€' },
+                    'nextgen-ministries':        { en: 'Ministries',    ko: 'ì„¸ëŒ€ ì‚¬ì—­' },
+                    'nextgen-gallery':   { en: 'Gallery',          ko: 'ì‚¬ì§„ì²©' },
+                'nav-smd':      { en: 'SMD344',       ko: 'SMD344 ì„ êµë‹¨' },
+                    'smd-missionary':    { en: 'Missionaries',     ko: 'í›„ì› ì„ êµì‚¬' },
+                    'smd-discipleship':  { en: 'Discipleship',     ko: 'ì œìž í›ˆë ¨' },  
                 // Mobile Nav
-                'm-home':    { en: 'Home',        ko: '홈' },
-                'm-about':   { en: 'About',        ko: '교회 소개' },
-                    'm-about-greeting': { en: 'Greeting',        ko: '인사말' },
-                    'm-about-vision':   { en: 'Vision', ko: '교회 비전' },
-                    'm-about-worship':  { en: 'Worship Schedule', ko: '예배시간 안내' },
-                    'm-about-location': { en: 'Directions', ko: '오시는 길' },
-                'm-community': { en: 'Our Community',  ko: '교회 구성' },
-                    'm-community-pos':     { en: 'POS Groups',     ko: 'POS 모임' },
-                    'm-community-school':  { en: 'Korean School',  ko: '한국 학교' },
-                    'm-community-dept':    { en: 'Departments',    ko: '부서' },
-                'm-events':    { en: 'Events',       ko: '행사 및 모임' },
-                    'm-events-regular':    { en: 'Regular Meetings', ko: '정기모임' },
-                    'm-events-academy':    { en: 'Academy',         ko: '아카데미' },
-                    'm-events-special':    { en: 'Special Events',   ko: '특별행사' },
-                'm-nextgen':  { en: 'Next Gen',     ko: '다음 세대' },
-                    'm-nextgen-ministries':        { en: 'Ministries',    ko: '세대 사역' },
-                    'm-nextgen-gallery':   { en: 'Gallery',          ko: '사진첩' },
-                'm-smd': { en: 'SMD344',       ko: 'SMD344 선교단' },
-                    'm-smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
-                    'm-smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },
+                'm-home':    { en: 'Home',        ko: 'í™ˆ' },
+                'm-about':   { en: 'About',        ko: 'êµíšŒ ì†Œê°œ' },
+                    'm-about-greeting': { en: 'Greeting',        ko: 'ì¸ì‚¬ë§' },
+                    'm-about-vision':   { en: 'Vision', ko: 'êµíšŒ ë¹„ì „' },
+                    'm-about-worship':  { en: 'Worship Schedule', ko: 'ì˜ˆë°°ì‹œê°„ ì•ˆë‚´' },
+                    'm-about-location': { en: 'Directions', ko: 'ì˜¤ì‹œëŠ” ê¸¸' },
+                'm-community': { en: 'Our Community',  ko: 'êµíšŒ êµ¬ì„±' },
+                    'm-community-pos':     { en: 'POS Groups',     ko: 'POS ëª¨ìž„' },
+                    'm-community-school':  { en: 'Korean School',  ko: 'í•œêµ­ í•™êµ' },
+                    'm-community-dept':    { en: 'Departments',    ko: 'ë¶€ì„œ' },
+                'm-events':    { en: 'Events',       ko: 'í–‰ì‚¬ ë° ëª¨ìž„' },
+                    'm-events-regular':    { en: 'Regular Meetings', ko: 'ì •ê¸°ëª¨ìž„' },
+                    'm-events-academy':    { en: 'Academy',         ko: 'ì•„ì¹´ë°ë¯¸' },
+                    'm-events-special':    { en: 'Special Events',   ko: 'íŠ¹ë³„í–‰ì‚¬' },
+                'm-nextgen':  { en: 'Next Gen',     ko: 'ë‹¤ìŒ ì„¸ëŒ€' },
+                    'm-nextgen-ministries':        { en: 'Ministries',    ko: 'ì„¸ëŒ€ ì‚¬ì—­' },
+                    'm-nextgen-gallery':   { en: 'Gallery',          ko: 'ì‚¬ì§„ì²©' },
+                'm-smd': { en: 'SMD344',       ko: 'SMD344 ì„ êµë‹¨' },
+                    'm-smd-missionary':    { en: 'Missionaries',     ko: 'í›„ì› ì„ êµì‚¬' },
+                    'm-smd-discipleship':  { en: 'Discipleship',     ko: 'ì œìž í›ˆë ¨' },
                 // Special Events
-                "special-title": { en: "Special Events", ko: "특별 행사" },
-                "homevisit-title": {en: "New Year Home Visits",ko: "신년 대심방" },
+                "special-title": { en: "Special Events", ko: "íŠ¹ë³„ í–‰ì‚¬" },
+                "homevisit-title": {en: "New Year Home Visits",ko: "ì‹ ë…„ ëŒ€ì‹¬ë°©" },
                 "homevisit-body": {
                     en: "Every January, we visit households by request to begin the new year with a family worship service, share plans and prayer requests, and speak a blessing.",
-                    ko: "매년 1월, 신청 가정을 대상으로 신년 대심방을 진행합니다. 새해를 가정 예배로 시작하며, 한 해의 계획과 기도제목을 함께 나누고 축복합니다."
+                    ko: "ë§¤ë…„ 1ì›”, ì‹ ì²­ ê°€ì •ì„ ëŒ€ìƒìœ¼ë¡œ ì‹ ë…„ ëŒ€ì‹¬ë°©ì„ ì§„í–‰í•©ë‹ˆë‹¤. ìƒˆí•´ë¥¼ ê°€ì • ì˜ˆë°°ë¡œ ì‹œìž‘í•˜ë©°, í•œ í•´ì˜ ê³„íšê³¼ ê¸°ë„ì œëª©ì„ í•¨ê»˜ ë‚˜ëˆ„ê³  ì¶•ë³µí•©ë‹ˆë‹¤."
                 },
-                "homevisit-1": { en: "Home visits by request (pre-registration)", ko: "가정별 심방(사전 신청제)" },
-                "homevisit-2": { en: "Timing: Every January", ko: "진행 시기: 매년 1월" },
-                "homevisit-3": { en: "Scripture sharing · Prayer · Blessing", ko: "말씀 나눔 · 기도 · 축복" },
-                "retreat-title": { en: "New Year Retreat", ko: "신년 수련회" },
+                "homevisit-1": { en: "Home visits by request (pre-registration)", ko: "ê°€ì •ë³„ ì‹¬ë°©(ì‚¬ì „ ì‹ ì²­ì œ)" },
+                "homevisit-2": { en: "Timing: Every January", ko: "ì§„í–‰ ì‹œê¸°: ë§¤ë…„ 1ì›”" },
+                "homevisit-3": { en: "Scripture sharing Â· Prayer Â· Blessing", ko: "ë§ì”€ ë‚˜ëˆ” Â· ê¸°ë„ Â· ì¶•ë³µ" },
+                "retreat-title": { en: "New Year Retreat", ko: "ì‹ ë…„ ìˆ˜ë ¨íšŒ" },
                 "retreat-body": {
-                    en: "Each February, our whole church gathers for a retreat to plan the year and seek God’s guidance. It’s held at church or at an off-site venue, centered on worship, the Word, and prayer.",
-                    ko: "매년 2월 온 교회가 함께하는 신년 수련회를 통해 1년 사역을 계획하고 하나님의 인도하심을 구합니다. 교회 또는 외부 장소에서 진행되며, 주요 예배와 말씀, 기도회가 중심이 됩니다."
+                    en: "Each February, our whole church gathers for a retreat to plan the year and seek Godâ€™s guidance. Itâ€™s held at church or at an off-site venue, centered on worship, the Word, and prayer.",
+                    ko: "ë§¤ë…„ 2ì›” ì˜¨ êµíšŒê°€ í•¨ê»˜í•˜ëŠ” ì‹ ë…„ ìˆ˜ë ¨íšŒë¥¼ í†µí•´ 1ë…„ ì‚¬ì—­ì„ ê³„íší•˜ê³  í•˜ë‚˜ë‹˜ì˜ ì¸ë„í•˜ì‹¬ì„ êµ¬í•©ë‹ˆë‹¤. êµíšŒ ë˜ëŠ” ì™¸ë¶€ ìž¥ì†Œì—ì„œ ì§„í–‰ë˜ë©°, ì£¼ìš” ì˜ˆë°°ì™€ ë§ì”€, ê¸°ë„íšŒê°€ ì¤‘ì‹¬ì´ ë©ë‹ˆë‹¤."
                 },
-                "retreat-1": { en: "Location: Church or retreat venue", ko: "장소: 교회 또는 수련 장소" },
+                "retreat-1": { en: "Location: Church or retreat venue", ko: "ìž¥ì†Œ: êµíšŒ ë˜ëŠ” ìˆ˜ë ¨ ìž¥ì†Œ" },
                 "retreat-2": {
                     en: "Whole-church participation (combined ministries)",
-                    ko: "전교인 참여(부서 연합)"
+                    ko: "ì „êµì¸ ì°¸ì—¬(ë¶€ì„œ ì—°í•©)"
                 },
                 "retreat-3": {
                     en: "Programs: Word, prayer, and vision sharing",
-                    ko: "말씀/기도/비전 나눔 프로그램 운영"
+                    ko: "ë§ì”€/ê¸°ë„/ë¹„ì „ ë‚˜ëˆ” í”„ë¡œê·¸ëž¨ ìš´ì˜"
                 },
                 "retreat-programs-title": {
                     en: "Sunday School & Youth Programs",
-                    ko: "Sunday School & Youth 프로그램"
+                    ko: "Sunday School & Youth í”„ë¡œê·¸ëž¨"
                 },
                 "retreat-programs-body": {
                     en: "During the retreat, Sunday School and Youth run separate, age-appropriate tracks (worship, small groups, and activities).",
-                    ko: "같은 기간 Sunday School과 Youth도 연령별 맞춤 프로그램(예배, 소그룹, 활동)을 별도로 진행합니다."
+                    ko: "ê°™ì€ ê¸°ê°„ Sunday Schoolê³¼ Youthë„ ì—°ë ¹ë³„ ë§žì¶¤ í”„ë¡œê·¸ëž¨(ì˜ˆë°°, ì†Œê·¸ë£¹, í™œë™)ì„ ë³„ë„ë¡œ ì§„í–‰í•©ë‹ˆë‹¤."
                 },
             
                 // Donation
-                'donation-title': { en: 'Giving & Support', ko: '헌금과 후원' },
-                'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: '여러분의 소중한 헌금과 헌물은 교회와 선교지를 위해 귀하게 쓰입니다.' }
+                'donation-title': { en: 'Giving & Support', ko: 'í—Œê¸ˆê³¼ í›„ì›' },
+                'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: 'ì—¬ëŸ¬ë¶„ì˜ ì†Œì¤‘í•œ í—Œê¸ˆê³¼ í—Œë¬¼ì€ êµíšŒì™€ ì„ êµì§€ë¥¼ ìœ„í•´ ê·€í•˜ê²Œ ì“°ìž…ë‹ˆë‹¤.' }
             };
         </script>
         <script src="../assets/js/script.js"></script>

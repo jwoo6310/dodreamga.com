@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -28,7 +28,8 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="/assets/favicon/site.webmanifest" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link rel="stylesheet" href="/assets/css/tailwind.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://unpkg.com/feather-icons"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
@@ -143,7 +144,7 @@
                             <!-- Language Toggle -->
                             <li class="flex items-center">
                                 <button id="language-toggle" class="ml-2 px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">
-                                한글/ENG
+                                í•œê¸€/ENG
                                 </button>
                             </li>
                             </ul>
@@ -163,7 +164,7 @@
                 <img src="../assets/img/logo.png" alt="DoDream Church Logo" class="h-10 w-auto">
                 </a>
                 <div class="flex items-center space-x-2">
-                    <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">한글/ENG</button>
+                    <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">í•œê¸€/ENG</button>
                     <button id="mobile-menu-toggle" class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none">
                     <i data-feather="menu"></i>
                     </button>        
@@ -247,7 +248,7 @@
         <div class="bg-gray-100">
             <main class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
                 <div class="text-center mb-12 pt-12">
-                    <h2 id="ministries-title" class="text-3xl font-bold text-primary mb-4">세대 사역</h2>
+                    <h2 id="ministries-title" class="text-3xl font-bold text-primary mb-4">ì„¸ëŒ€ ì‚¬ì—­</h2>
                     <div class="w-24 h-1 bg-brand-700 mx-auto"></div>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
@@ -259,8 +260,8 @@
                             </div>
                             <h3 id="ss-title" class="text-xl font-bold text-gray-800 font-notoserif">Sunday School</h3>
                         </div>
-                        <p id="ss-1" class="text-gray-600 mb-2">주일 낮 11시, 본당 예배 시간에 교육관에서 모입니다.</p>
-                        <p id="ss-2" class="text-gray-600">예배, 성경공부, 연령별 특별활동을 진행합니다.</p>
+                        <p id="ss-1" class="text-gray-600 mb-2">ì£¼ì¼ ë‚® 11ì‹œ, ë³¸ë‹¹ ì˜ˆë°° ì‹œê°„ì— êµìœ¡ê´€ì—ì„œ ëª¨ìž…ë‹ˆë‹¤.</p>
+                        <p id="ss-2" class="text-gray-600">ì˜ˆë°°, ì„±ê²½ê³µë¶€, ì—°ë ¹ë³„ íŠ¹ë³„í™œë™ì„ ì§„í–‰í•©ë‹ˆë‹¤.</p>
                     </div>
                     <!-- DREAM EM -->
                     <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -270,8 +271,8 @@
                             </div>
                             <h3 id="em-title" class="text-xl font-bold text-gray-800 font-notoserif">DREAM EM</h3>
                         </div>
-                        <p id="em-1" class="text-gray-600 mb-2">주일 예배 후 오후 1시에 예배와 성경공부 및 공동체 활동을 진행합니다.</p>
-                        <p id="em-2" class="text-gray-600">매년 수련회·캠프·선교 여행 등에 자체 또는 타 단체와 함께 참여합니다.</p>
+                        <p id="em-1" class="text-gray-600 mb-2">ì£¼ì¼ ì˜ˆë°° í›„ ì˜¤í›„ 1ì‹œì— ì˜ˆë°°ì™€ ì„±ê²½ê³µë¶€ ë° ê³µë™ì²´ í™œë™ì„ ì§„í–‰í•©ë‹ˆë‹¤.</p>
+                        <p id="em-2" class="text-gray-600">ë§¤ë…„ ìˆ˜ë ¨íšŒÂ·ìº í”„Â·ì„ êµ ì—¬í–‰ ë“±ì— ìžì²´ ë˜ëŠ” íƒ€ ë‹¨ì²´ì™€ í•¨ê»˜ ì°¸ì—¬í•©ë‹ˆë‹¤.</p>
                     </div>
                     <!-- Young Adults 1 -->
                     <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -279,10 +280,10 @@
                             <div class="bg-teal-100 p-3 rounded-full mr-4">
                                 <i data-feather="coffee" class="text-teal-600"></i>
                             </div>
-                            <h3 id="ya1-title" class="text-xl font-bold text-gray-800 font-notoserif">제1청년</h3>
+                            <h3 id="ya1-title" class="text-xl font-bold text-gray-800 font-notoserif">ì œ1ì²­ë…„</h3>
                         </div>
-                        <p id="ya1-1" class="text-gray-600 mb-2">20대 초반 청년으로 구성되어 있습니다.</p>
-                        <p id="ya1-2" class="text-gray-600">주일 예배 후 친교 및 소그룹 모임을 갖습니다.</p>
+                        <p id="ya1-1" class="text-gray-600 mb-2">20ëŒ€ ì´ˆë°˜ ì²­ë…„ìœ¼ë¡œ êµ¬ì„±ë˜ì–´ ìžˆìŠµë‹ˆë‹¤.</p>
+                        <p id="ya1-2" class="text-gray-600">ì£¼ì¼ ì˜ˆë°° í›„ ì¹œêµ ë° ì†Œê·¸ë£¹ ëª¨ìž„ì„ ê°–ìŠµë‹ˆë‹¤.</p>
                     </div>
                     <!-- Young Adults 2 -->
                     <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -290,11 +291,11 @@
                             <div class="bg-rose-100 p-3 rounded-full mr-4">
                                 <i data-feather="calendar" class="text-rose-600"></i>
                             </div>
-                            <h3 id="ya2-title" class="text-xl font-bold text-gray-800 font-notoserif">제2청년</h3>
+                            <h3 id="ya2-title" class="text-xl font-bold text-gray-800 font-notoserif">ì œ2ì²­ë…„</h3>
                         </div>
-                        <p id="ya2-1" class="text-gray-600 mb-2">20대 후반 청년으로 구성되어 있습니다.</p>
-                        <p id="ya2-2" class="text-gray-600 mb-2">한 달에 한 번 POS 모임으로 정기적으로 모입니다.</p>
-                        <p id="ya2-3" class="text-gray-600">연령대가 맞는 젊은 부부도 함께 참여할 수 있습니다.</p>
+                        <p id="ya2-1" class="text-gray-600 mb-2">20ëŒ€ í›„ë°˜ ì²­ë…„ìœ¼ë¡œ êµ¬ì„±ë˜ì–´ ìžˆìŠµë‹ˆë‹¤.</p>
+                        <p id="ya2-2" class="text-gray-600 mb-2">í•œ ë‹¬ì— í•œ ë²ˆ POS ëª¨ìž„ìœ¼ë¡œ ì •ê¸°ì ìœ¼ë¡œ ëª¨ìž…ë‹ˆë‹¤.</p>
+                        <p id="ya2-3" class="text-gray-600">ì—°ë ¹ëŒ€ê°€ ë§žëŠ” ì Šì€ ë¶€ë¶€ë„ í•¨ê»˜ ì°¸ì—¬í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.</p>
                     </div>
                 </div>
             </main>
@@ -363,47 +364,47 @@
         <script>
             const elementsToTranslate = {
                 // PC Nav
-                'nav-home':     { en: 'Home',         ko: '홈' },
-                'nav-about':    { en: 'About',        ko: '교회 소개' },
-                    'about-greeting': { en: 'Greeting',        ko: '인사말' },
-                    'about-vision':   { en: 'Vision', ko: '교회 비전' },
-                    'about-worship':  { en: 'Worship Schedule', ko: '예배시간 안내' },
-                    'about-location': { en: 'Directions', ko: '오시는 길' },
-                'nav-community':{ en: 'Our Community',  ko: '교회 구성' },
-                    'community-pos':     { en: 'POS Groups',     ko: 'POS 모임' },
-                    'community-school':  { en: 'Korean School',  ko: '한국 학교' },
-                    'community-dept':    { en: 'Departments',    ko: '부서' },
-                'nav-events':   { en: 'Events',       ko: '행사 및 모임' },
-                    'events-regular':    { en: 'Regular Meetings', ko: '정기모임' },
-                    'events-academy':    { en: 'Academy',         ko: '아카데미' },
-                    'events-special':    { en: 'Special Events',   ko: '특별행사' },
-                'nav-nextgen':  { en: 'Next Gen',     ko: '다음 세대' },
-                    'nextgen-ministries':        { en: 'Ministries',    ko: '세대 사역' },
-                    'nextgen-gallery':   { en: 'Gallery',          ko: '사진첩' },
-                'nav-smd':      { en: 'SMD344',       ko: 'SMD344 선교단' },
-                    'smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
-                    'smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },  
+                'nav-home':     { en: 'Home',         ko: 'í™ˆ' },
+                'nav-about':    { en: 'About',        ko: 'êµíšŒ ì†Œê°œ' },
+                    'about-greeting': { en: 'Greeting',        ko: 'ì¸ì‚¬ë§' },
+                    'about-vision':   { en: 'Vision', ko: 'êµíšŒ ë¹„ì „' },
+                    'about-worship':  { en: 'Worship Schedule', ko: 'ì˜ˆë°°ì‹œê°„ ì•ˆë‚´' },
+                    'about-location': { en: 'Directions', ko: 'ì˜¤ì‹œëŠ” ê¸¸' },
+                'nav-community':{ en: 'Our Community',  ko: 'êµíšŒ êµ¬ì„±' },
+                    'community-pos':     { en: 'POS Groups',     ko: 'POS ëª¨ìž„' },
+                    'community-school':  { en: 'Korean School',  ko: 'í•œêµ­ í•™êµ' },
+                    'community-dept':    { en: 'Departments',    ko: 'ë¶€ì„œ' },
+                'nav-events':   { en: 'Events',       ko: 'í–‰ì‚¬ ë° ëª¨ìž„' },
+                    'events-regular':    { en: 'Regular Meetings', ko: 'ì •ê¸°ëª¨ìž„' },
+                    'events-academy':    { en: 'Academy',         ko: 'ì•„ì¹´ë°ë¯¸' },
+                    'events-special':    { en: 'Special Events',   ko: 'íŠ¹ë³„í–‰ì‚¬' },
+                'nav-nextgen':  { en: 'Next Gen',     ko: 'ë‹¤ìŒ ì„¸ëŒ€' },
+                    'nextgen-ministries':        { en: 'Ministries',    ko: 'ì„¸ëŒ€ ì‚¬ì—­' },
+                    'nextgen-gallery':   { en: 'Gallery',          ko: 'ì‚¬ì§„ì²©' },
+                'nav-smd':      { en: 'SMD344',       ko: 'SMD344 ì„ êµë‹¨' },
+                    'smd-missionary':    { en: 'Missionaries',     ko: 'í›„ì› ì„ êµì‚¬' },
+                    'smd-discipleship':  { en: 'Discipleship',     ko: 'ì œìž í›ˆë ¨' },  
                 // Mobile Nav
-                'm-home':    { en: 'Home',        ko: '홈' },
-                'm-about':   { en: 'About',        ko: '교회 소개' },
-                    'm-about-greeting': { en: 'Greeting',        ko: '인사말' },
-                    'm-about-vision':   { en: 'Vision', ko: '교회 비전' },
-                    'm-about-worship':  { en: 'Worship Schedule', ko: '예배시간 안내' },
-                    'm-about-location': { en: 'Directions', ko: '오시는 길' },
-                'm-community': { en: 'Our Community',  ko: '교회 구성' },
-                    'm-community-pos':     { en: 'POS Groups',     ko: 'POS 모임' },
-                    'm-community-school':  { en: 'Korean School',  ko: '한국 학교' },
-                    'm-community-dept':    { en: 'Departments',    ko: '부서' },
-                'm-events':    { en: 'Events',       ko: '행사 및 모임' },
-                    'm-events-regular':    { en: 'Regular Meetings', ko: '정기모임' },
-                    'm-events-academy':    { en: 'Academy',         ko: '아카데미' },
-                    'm-events-special':    { en: 'Special Events',   ko: '특별행사' },
-                'm-nextgen':  { en: 'Next Gen',     ko: '다음 세대' },
-                    'm-nextgen-ministries':        { en: 'Ministries',    ko: '세대 사역' },
-                    'm-nextgen-gallery':   { en: 'Gallery',          ko: '사진첩' },
-                'm-smd': { en: 'SMD344',       ko: 'SMD344 선교단' },
-                    'm-smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
-                    'm-smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },
+                'm-home':    { en: 'Home',        ko: 'í™ˆ' },
+                'm-about':   { en: 'About',        ko: 'êµíšŒ ì†Œê°œ' },
+                    'm-about-greeting': { en: 'Greeting',        ko: 'ì¸ì‚¬ë§' },
+                    'm-about-vision':   { en: 'Vision', ko: 'êµíšŒ ë¹„ì „' },
+                    'm-about-worship':  { en: 'Worship Schedule', ko: 'ì˜ˆë°°ì‹œê°„ ì•ˆë‚´' },
+                    'm-about-location': { en: 'Directions', ko: 'ì˜¤ì‹œëŠ” ê¸¸' },
+                'm-community': { en: 'Our Community',  ko: 'êµíšŒ êµ¬ì„±' },
+                    'm-community-pos':     { en: 'POS Groups',     ko: 'POS ëª¨ìž„' },
+                    'm-community-school':  { en: 'Korean School',  ko: 'í•œêµ­ í•™êµ' },
+                    'm-community-dept':    { en: 'Departments',    ko: 'ë¶€ì„œ' },
+                'm-events':    { en: 'Events',       ko: 'í–‰ì‚¬ ë° ëª¨ìž„' },
+                    'm-events-regular':    { en: 'Regular Meetings', ko: 'ì •ê¸°ëª¨ìž„' },
+                    'm-events-academy':    { en: 'Academy',         ko: 'ì•„ì¹´ë°ë¯¸' },
+                    'm-events-special':    { en: 'Special Events',   ko: 'íŠ¹ë³„í–‰ì‚¬' },
+                'm-nextgen':  { en: 'Next Gen',     ko: 'ë‹¤ìŒ ì„¸ëŒ€' },
+                    'm-nextgen-ministries':        { en: 'Ministries',    ko: 'ì„¸ëŒ€ ì‚¬ì—­' },
+                    'm-nextgen-gallery':   { en: 'Gallery',          ko: 'ì‚¬ì§„ì²©' },
+                'm-smd': { en: 'SMD344',       ko: 'SMD344 ì„ êµë‹¨' },
+                    'm-smd-missionary':    { en: 'Missionaries',     ko: 'í›„ì› ì„ êµì‚¬' },
+                    'm-smd-discipleship':  { en: 'Discipleship',     ko: 'ì œìž í›ˆë ¨' },
                 // Ministries
                 'ss-title': {
                     en: 'Sunday School',
@@ -411,11 +412,11 @@
                 },
                 'ss-1': {
                     en: 'Sundays at 11:00 AM, we meet in the education building during the main service.',
-                    ko: '주일 낮 11시, 본당 예배 시간에 교육관에서 모입니다.'
+                    ko: 'ì£¼ì¼ ë‚® 11ì‹œ, ë³¸ë‹¹ ì˜ˆë°° ì‹œê°„ì— êµìœ¡ê´€ì—ì„œ ëª¨ìž…ë‹ˆë‹¤.'
                 },
                 'ss-2': {
                     en: 'We worship together, study the Bible, and enjoy age-appropriate special activities.',
-                    ko: '예배, 성경공부, 연령별 특별활동을 진행합니다.'
+                    ko: 'ì˜ˆë°°, ì„±ê²½ê³µë¶€, ì—°ë ¹ë³„ íŠ¹ë³„í™œë™ì„ ì§„í–‰í•©ë‹ˆë‹¤.'
                 },
             
                 'em-title': {
@@ -424,46 +425,46 @@
                 },
                 'em-1': {
                     en: 'Sundays at 1:00 PM after the main service, we gather for worship, Bible study, and community activities.',
-                    ko: '주일 예배 후 오후 1시에 예배와 성경공부 및 공동체 활동을 진행합니다.'
+                    ko: 'ì£¼ì¼ ì˜ˆë°° í›„ ì˜¤í›„ 1ì‹œì— ì˜ˆë°°ì™€ ì„±ê²½ê³µë¶€ ë° ê³µë™ì²´ í™œë™ì„ ì§„í–‰í•©ë‹ˆë‹¤.'
                 },
                 'em-2': {
-                    en: 'Each year we take part—on our own or with partner ministries—in retreats, camps, or mission trips.',
-                    ko: '매년 수련회·캠프·선교 여행 등에 자체 또는 타 단체와 함께 참여합니다.'
+                    en: 'Each year we take partâ€”on our own or with partner ministriesâ€”in retreats, camps, or mission trips.',
+                    ko: 'ë§¤ë…„ ìˆ˜ë ¨íšŒÂ·ìº í”„Â·ì„ êµ ì—¬í–‰ ë“±ì— ìžì²´ ë˜ëŠ” íƒ€ ë‹¨ì²´ì™€ í•¨ê»˜ ì°¸ì—¬í•©ë‹ˆë‹¤.'
                 },
             
                 'ya1-title': {
                     en: 'Young Adults 1',
-                    ko: '제1청년'
+                    ko: 'ì œ1ì²­ë…„'
                 },
                 'ya1-1': {
                     en: 'Comprised of young adults in their early 20s.',
-                    ko: '20대 초반 청년으로 구성되어 있습니다.'
+                    ko: '20ëŒ€ ì´ˆë°˜ ì²­ë…„ìœ¼ë¡œ êµ¬ì„±ë˜ì–´ ìžˆìŠµë‹ˆë‹¤.'
                 },
                 'ya1-2': {
                     en: 'We meet after the Sunday service for fellowship and small groups.',
-                    ko: '주일 예배 후 친교 및 소그룹 모임을 갖습니다.'
+                    ko: 'ì£¼ì¼ ì˜ˆë°° í›„ ì¹œêµ ë° ì†Œê·¸ë£¹ ëª¨ìž„ì„ ê°–ìŠµë‹ˆë‹¤.'
                 },
             
                 'ya2-title': {
                     en: 'Young Adults 2',
-                    ko: '제2청년'
+                    ko: 'ì œ2ì²­ë…„'
                 },
                 'ya2-1': {
                     en: 'Comprised of young adults in their late 20s.',
-                    ko: '20대 후반 청년으로 구성되어 있습니다.'
+                    ko: '20ëŒ€ í›„ë°˜ ì²­ë…„ìœ¼ë¡œ êµ¬ì„±ë˜ì–´ ìžˆìŠµë‹ˆë‹¤.'
                 },
                 'ya2-2': {
                     en: 'We meet once a month as a POS group.',
-                    ko: '한 달에 한 번 POS 모임으로 정기적으로 모입니다.'
+                    ko: 'í•œ ë‹¬ì— í•œ ë²ˆ POS ëª¨ìž„ìœ¼ë¡œ ì •ê¸°ì ìœ¼ë¡œ ëª¨ìž…ë‹ˆë‹¤.'
                 },
                 'ya2-3': {
                     en: 'Young married couples in the same age range are welcome to join.',
-                    ko: '연령대가 맞는 젊은 부부도 함께 참여할 수 있습니다.'
+                    ko: 'ì—°ë ¹ëŒ€ê°€ ë§žëŠ” ì Šì€ ë¶€ë¶€ë„ í•¨ê»˜ ì°¸ì—¬í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.'
                 },
             
                 // Donation
-                'donation-title': { en: 'Giving & Support', ko: '헌금과 후원' },
-                'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: '여러분의 소중한 헌금과 헌물은 교회와 선교지를 위해 귀하게 쓰입니다.' }
+                'donation-title': { en: 'Giving & Support', ko: 'í—Œê¸ˆê³¼ í›„ì›' },
+                'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: 'ì—¬ëŸ¬ë¶„ì˜ ì†Œì¤‘í•œ í—Œê¸ˆê³¼ í—Œë¬¼ì€ êµíšŒì™€ ì„ êµì§€ë¥¼ ìœ„í•´ ê·€í•˜ê²Œ ì“°ìž…ë‹ˆë‹¤.' }
             };
         </script>
         <script src="../assets/js/script.js"></script>
