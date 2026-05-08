@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -144,7 +144,7 @@
                             <!-- Language Toggle -->
                             <li class="flex items-center">
                                 <button id="language-toggle" class="ml-2 px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">
-                                í•œê¸€/ENG
+                                한글/ENG
                                 </button>
                             </li>
                             </ul>
@@ -164,7 +164,7 @@
                 <img src="../assets/img/logo.png" alt="DoDream Church Logo" class="h-10 w-auto">
                 </a>
                 <div class="flex items-center space-x-2">
-                    <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">í•œê¸€/ENG</button>
+                    <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">한글/ENG</button>
                     <button id="mobile-menu-toggle" class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none">
                     <i data-feather="menu"></i>
                     </button>        
@@ -399,72 +399,72 @@
         <script>
             const elementsToTranslate = {
                 // PC Nav
-                'nav-home':     { en: 'Home',         ko: 'í™ˆ' },
-                'nav-about':    { en: 'About',        ko: 'êµíšŒ ì†Œê°œ' },
-                    'about-greeting': { en: 'Greeting',        ko: 'ì¸ì‚¬ë§' },
-                    'about-vision':   { en: 'Vision', ko: 'êµíšŒ ë¹„ì „' },
-                    'about-worship':  { en: 'Worship Schedule', ko: 'ì˜ˆë°°ì‹œê°„ ì•ˆë‚´' },
-                    'about-location': { en: 'Directions', ko: 'ì˜¤ì‹œëŠ” ê¸¸' },
-                'nav-community':{ en: 'Our Community',  ko: 'êµíšŒ êµ¬ì„±' },
-                    'community-pos':     { en: 'POS Groups',     ko: 'POS ëª¨ìž„' },
-                    'community-school':  { en: 'Korean School',  ko: 'í•œêµ­ í•™êµ' },
-                    'community-dept':    { en: 'Departments',    ko: 'ë¶€ì„œ' },
-                'nav-events':   { en: 'Events',       ko: 'í–‰ì‚¬ ë° ëª¨ìž„' },
-                    'events-regular':    { en: 'Regular Meetings', ko: 'ì •ê¸°ëª¨ìž„' },
-                    'events-academy':    { en: 'Academy',         ko: 'ì•„ì¹´ë°ë¯¸' },
-                    'events-special':    { en: 'Special Events',   ko: 'íŠ¹ë³„í–‰ì‚¬' },
-                'nav-nextgen':  { en: 'Next Gen',     ko: 'ë‹¤ìŒ ì„¸ëŒ€' },
-                    'nextgen-ministries':        { en: 'Ministries',    ko: 'ì„¸ëŒ€ ì‚¬ì—­' },
-                    'nextgen-gallery':   { en: 'Gallery',          ko: 'ì‚¬ì§„ì²©' },
-                'nav-smd':      { en: 'SMD344',       ko: 'SMD344 ì„ êµë‹¨' },
-                    'smd-missionary':    { en: 'Missionaries',     ko: 'í›„ì› ì„ êµì‚¬' },
-                    'smd-discipleship':  { en: 'Discipleship',     ko: 'ì œìž í›ˆë ¨' },  
+                'nav-home':     { en: 'Home',         ko: '홈' },
+                'nav-about':    { en: 'About',        ko: '교회 소개' },
+                    'about-greeting': { en: 'Greeting',        ko: '인사말' },
+                    'about-vision':   { en: 'Vision', ko: '교회 비전' },
+                    'about-worship':  { en: 'Worship Schedule', ko: '예배시간 안내' },
+                    'about-location': { en: 'Directions', ko: '오시는 길' },
+                'nav-community':{ en: 'Our Community',  ko: '교회 구성' },
+                    'community-pos':     { en: 'POS Groups',     ko: 'POS 모임' },
+                    'community-school':  { en: 'Korean School',  ko: '한국 학교' },
+                    'community-dept':    { en: 'Departments',    ko: '부서' },
+                'nav-events':   { en: 'Events',       ko: '행사 및 모임' },
+                    'events-regular':    { en: 'Regular Meetings', ko: '정기모임' },
+                    'events-academy':    { en: 'Academy',         ko: '아카데미' },
+                    'events-special':    { en: 'Special Events',   ko: '특별행사' },
+                'nav-nextgen':  { en: 'Next Gen',     ko: '다음 세대' },
+                    'nextgen-ministries':        { en: 'Ministries',    ko: '세대 사역' },
+                    'nextgen-gallery':   { en: 'Gallery',          ko: '사진첩' },
+                'nav-smd':      { en: 'SMD344',       ko: 'SMD344 선교단' },
+                    'smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
+                    'smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },  
                 // Mobile Nav
-                'm-home':    { en: 'Home',        ko: 'í™ˆ' },
-                'm-about':   { en: 'About',        ko: 'êµíšŒ ì†Œê°œ' },
-                    'm-about-greeting': { en: 'Greeting',        ko: 'ì¸ì‚¬ë§' },
-                    'm-about-vision':   { en: 'Vision', ko: 'êµíšŒ ë¹„ì „' },
-                    'm-about-worship':  { en: 'Worship Schedule', ko: 'ì˜ˆë°°ì‹œê°„ ì•ˆë‚´' },
-                    'm-about-location': { en: 'Directions', ko: 'ì˜¤ì‹œëŠ” ê¸¸' },
-                'm-community': { en: 'Our Community',  ko: 'êµíšŒ êµ¬ì„±' },
-                    'm-community-pos':     { en: 'POS Groups',     ko: 'POS ëª¨ìž„' },
-                    'm-community-school':  { en: 'Korean School',  ko: 'í•œêµ­ í•™êµ' },
-                    'm-community-dept':    { en: 'Departments',    ko: 'ë¶€ì„œ' },
-                'm-events':    { en: 'Events',       ko: 'í–‰ì‚¬ ë° ëª¨ìž„' },
-                    'm-events-regular':    { en: 'Regular Meetings', ko: 'ì •ê¸°ëª¨ìž„' },
-                    'm-events-academy':    { en: 'Academy',         ko: 'ì•„ì¹´ë°ë¯¸' },
-                    'm-events-special':    { en: 'Special Events',   ko: 'íŠ¹ë³„í–‰ì‚¬' },
-                'm-nextgen':  { en: 'Next Gen',     ko: 'ë‹¤ìŒ ì„¸ëŒ€' },
-                    'm-nextgen-ministries':        { en: 'Ministries',    ko: 'ì„¸ëŒ€ ì‚¬ì—­' },
-                    'm-nextgen-gallery':   { en: 'Gallery',          ko: 'ì‚¬ì§„ì²©' },
-                'm-smd': { en: 'SMD344',       ko: 'SMD344 ì„ êµë‹¨' },
-                    'm-smd-missionary':    { en: 'Missionaries',     ko: 'í›„ì› ì„ êµì‚¬' },
-                    'm-smd-discipleship':  { en: 'Discipleship',     ko: 'ì œìž í›ˆë ¨' },
+                'm-home':    { en: 'Home',        ko: '홈' },
+                'm-about':   { en: 'About',        ko: '교회 소개' },
+                    'm-about-greeting': { en: 'Greeting',        ko: '인사말' },
+                    'm-about-vision':   { en: 'Vision', ko: '교회 비전' },
+                    'm-about-worship':  { en: 'Worship Schedule', ko: '예배시간 안내' },
+                    'm-about-location': { en: 'Directions', ko: '오시는 길' },
+                'm-community': { en: 'Our Community',  ko: '교회 구성' },
+                    'm-community-pos':     { en: 'POS Groups',     ko: 'POS 모임' },
+                    'm-community-school':  { en: 'Korean School',  ko: '한국 학교' },
+                    'm-community-dept':    { en: 'Departments',    ko: '부서' },
+                'm-events':    { en: 'Events',       ko: '행사 및 모임' },
+                    'm-events-regular':    { en: 'Regular Meetings', ko: '정기모임' },
+                    'm-events-academy':    { en: 'Academy',         ko: '아카데미' },
+                    'm-events-special':    { en: 'Special Events',   ko: '특별행사' },
+                'm-nextgen':  { en: 'Next Gen',     ko: '다음 세대' },
+                    'm-nextgen-ministries':        { en: 'Ministries',    ko: '세대 사역' },
+                    'm-nextgen-gallery':   { en: 'Gallery',          ko: '사진첩' },
+                'm-smd': { en: 'SMD344',       ko: 'SMD344 선교단' },
+                    'm-smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
+                    'm-smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },
                 // Service Times
-                'service': { en: 'JOIN US', ko: 'í•¨ê»˜í•´ìš”'},
-                'service-title': { en: 'Our Weekly Services', ko: 'ì£¼ì¼ ì˜ˆë°° ì‹œê°„' },
-                'service-subtitle': { en: 'All are welcome to worship with us', ko: 'ëª¨ë‘ë¥¼ í™˜ì˜í•©ë‹ˆë‹¤' },
-                'sun-title': { en: 'Sunday Morning Worship', ko: 'ì£¼ì¼ ì˜¤ì „ ì˜ˆë°°' },
-                'sun-sub':   { en: 'Main Service', ko: 'ë³¸ ì˜ˆë°°' },
+                'service': { en: 'JOIN US', ko: '함께해요'},
+                'service-title': { en: 'Our Weekly Services', ko: '주일 예배 시간' },
+                'service-subtitle': { en: 'All are welcome to worship with us', ko: '모두를 환영합니다' },
+                'sun-title': { en: 'Sunday Morning Worship', ko: '주일 오전 예배' },
+                'sun-sub':   { en: 'Main Service', ko: '본 예배' },
                 'sun-body':  { 
                     en: '<span class="font-bold text-brand-600">11:00 AM</span> - Sunday School<br><span class="font-bold text-brand-600">11:00 AM</span> - Main/EM Worship Service<br>Separate services in Korean and English (EM) with powerful preaching and vibrant praise.',
-                    ko: '<span class="font-bold text-brand-600">11:00 AM</span> - Sunday School<br><span class="font-bold text-brand-600">11:00 AM</span> - ë³¸ ì˜ˆë°°/EM ì˜ˆë°°<br>í•œ/ì˜ì–´(EM) ì˜ˆë°°ê°€ ê°ê° ì§„í–‰ë©ë‹ˆë‹¤.'
+                    ko: '<span class="font-bold text-brand-600">11:00 AM</span> - Sunday School<br><span class="font-bold text-brand-600">11:00 AM</span> - 본 예배/EM 예배<br>한/영어(EM) 예배가 각각 진행됩니다.'
                 },
-                'thu-title': { en: 'Thursday Praise Night', ko: 'ëª©ìš” ì°¬ì–‘' },
-                'thu-sub':   { en: 'Midweek Praise & Joy',  ko: 'ì£¼ì¤‘ ì°¬ì–‘ ì˜ˆë°°' },
+                'thu-title': { en: 'Thursday Praise Night', ko: '목요 찬양' },
+                'thu-sub':   { en: 'Midweek Praise & Joy',  ko: '주중 찬양 예배' },
                 'thu-body':  { 
                     en: '<span class="font-bold text-brand-600">8:00 PM</span> - One Hour of Praise<br>Join us for an uplifting night of worship led by our praise team.',
-                    ko: '<span class="font-bold text-brand-600">8:00 PM</span> - 1ì‹œê°„ ì°¬ì–‘ ì§‘íšŒ<br>í•˜ë‚˜ë‹˜ê»˜ ì°¬ì–‘ìœ¼ë¡œ ì˜¬ë ¤ë“œë¦½ë‹ˆë‹¤.'
+                    ko: '<span class="font-bold text-brand-600">8:00 PM</span> - 1시간 찬양 집회<br>하나님께 찬양으로 올려드립니다.'
                 },
-                'youth-title': { en: 'Sunday Youth Fellowship', ko: 'ì£¼ì¼ ìœ ìŠ¤ ëª¨ìž„' },
-                'youth-sub':   { en: 'Young Disciples',        ko: 'ì²­ì†Œë…„ ì œìž ê³µë™ì²´' },
+                'youth-title': { en: 'Sunday Youth Fellowship', ko: '주일 유스 모임' },
+                'youth-sub':   { en: 'Young Disciples',        ko: '청소년 제자 공동체' },
                 'youth-body':  { 
                     en: '<span class="font-bold text-brand-600">12:00 PM</span> - Lunch & Fellowship<br><span class="font-bold text-brand-600">1:00 PM</span> - Bible Study & Activities<br>A joyful time of learning, sharing, and growing in faith together.',
-                    ko: '<span class="font-bold text-brand-600">12:00 PM</span> - ì ì‹¬ ë° êµì œ<br><span class="font-bold text-brand-600">1:00 PM</span> - ì„±ê²½ê³µë¶€ & í™œë™<br>í•¨ê»˜ ë°°ìš°ê³  ë‚˜ëˆ„ë©° ë¯¿ìŒìœ¼ë¡œ ìžë¼ê°€ëŠ” ì‹œê°„ìž…ë‹ˆë‹¤.'
+                    ko: '<span class="font-bold text-brand-600">12:00 PM</span> - 점심 및 교제<br><span class="font-bold text-brand-600">1:00 PM</span> - 성경공부 & 활동<br>함께 배우고 나누며 믿음으로 자라가는 시간입니다.'
                 },
                 // Donation
-                'donation-title': { en: 'Giving & Support', ko: 'í—Œê¸ˆê³¼ í›„ì›' },
-                'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: 'ì—¬ëŸ¬ë¶„ì˜ ì†Œì¤‘í•œ í—Œê¸ˆê³¼ í—Œë¬¼ì€ êµíšŒì™€ ì„ êµì§€ë¥¼ ìœ„í•´ ê·€í•˜ê²Œ ì“°ìž…ë‹ˆë‹¤.' }
+                'donation-title': { en: 'Giving & Support', ko: '헌금과 후원' },
+                'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: '여러분의 소중한 헌금과 헌물은 교회와 선교지를 위해 귀하게 쓰입니다.' }
             };
         </script>
         <script src="../assets/js/script.js"></script>
